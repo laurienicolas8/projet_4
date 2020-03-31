@@ -1,0 +1,90 @@
+header {
+    background-color: #fff;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #323540;
+}
+
+header h1 {
+    margin-left: 20px;
+}
+
+body {
+    font-family: 'Open Sans';
+    background: #D2D2D4;
+    margin: 0;
+}
+
+.form_login {
+    width: 500px;
+    margin: auto;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    background: #fff;
+    margin-top: 15vh;
+    transform: translateY(-15%);
+    border-radius: 5%;
+}
+
+.h1_login {
+    font-size: 40px;
+    color: #323540;
+}
+
+.label_login input {
+    width: 200px;
+}
+
+.button_login {
+    margin: 30px;
+    padding: 15px;
+    width: 140px;
+    height: 60px;
+    background-color: #C9D2FF;
+    border: 2px solid #C9D2FF;
+    color: #fff;
+    border-radius: 35px;
+    font-size: 1.1em;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.button_login:hover {
+    background-color: #fff;
+    border: 2px solid #C9D2FF;
+    color: #C9D2FF;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.menu a {
+    font-family: 'Fredoka One';
+    padding: 20px 0;
+    font-size: 2.3em;
+    width: 50%;
+    text-align: center;
+    color: white;
+    letter-spacing: 0.1em;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.active_menu {
+    border-bottom: 5px solid #bbb2ed;
+}
+
+.main {
+    width: 100%;
+    background-color: white;
+
+}
