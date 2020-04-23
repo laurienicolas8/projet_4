@@ -8,8 +8,8 @@
             <meta content="" name="keywords">
 
             <!-- Icons -->
-            <link href="../../public/images/favicon.png" rel="icon">
-            <link href="../../public/images/apple-touch-icon.png" rel="apple-touch-icon">
+            <link href="./public/images/favicon.png" rel="icon">
+            <link href="./public/images/apple-touch-icon.png" rel="apple-touch-icon">
             <script src="https://kit.fontawesome.com/a7057ee266.js"></script>
 
             <!-- Google Fonts -->
@@ -17,14 +17,14 @@
             <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
 
             <!-- Vendor CSS Files -->
-            <link href="../../public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-            <link href="../../public/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-            <link href="../../public/vendor/animate.css/animate.min.css" rel="stylesheet">
-            <link href="../../public/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
-            <link href="../../public/vendor/venobox/venobox.css" rel="stylesheet">
+            <link href="./public/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+            <link href="./public/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+            <link href="./public/vendor/animate.css/animate.min.css" rel="stylesheet">
+            <link href="./public/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+            <link href="./public/vendor/venobox/venobox.css" rel="stylesheet">
 
             <!-- Template Main CSS File -->
-            <link href="../../public/css/style.css" rel="stylesheet">
+            <link href="./public/css/style.css" rel="stylesheet">
       </head>
 
       <body>
@@ -38,8 +38,8 @@
 
                   <nav class="main-nav float-right d-none d-lg-block">
                         <ul>
-                        <li class="active"><a href="../../view/frontend/home.php">Accueil</a></li>
-                        <li><a href="../../view/frontend/posts.php">Chapitres</a></li>
+                        <li class="active"><a href="./index.php">Accueil</a></li>
+                        <li><a href="./index.php?action=listPosts">Chapitres</a></li>
                         </ul>
                   </nav>
             </div>
@@ -58,7 +58,7 @@
                   <div class="row justify-content-center">
                         <div class="col-lg-8">
                         <div class="testimonial-item">
-                              <img src="../../public/images/testimonial-3.jpg" class="testimonial-img" alt="Photo de l'auteur"/>
+                              <img src="./public/images/testimonial-3.jpg" class="testimonial-img" alt="Photo de l'auteur"/>
                               <h3>Jean Forteroche</h3>
                               <h4>Ecrivain</h4>
                               <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
@@ -72,25 +72,25 @@
             <div class="footer-top">
                   <div class="container">
                         <div class="row">
-                        <div class="col-lg-4 col-md-6 footer-info">
-                              <h3>Jean Forteroche</h3>
-                              <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 footer-contact">
-                              <h4>Me contacter</h4>
-                              <p>A108 Adam Street <br>
-                              New York, NY 535022<br>
-                              United States <br>
-                              <strong>Téléphone:</strong> 06.48.36.25.48<br>
-                              <strong>Email:</strong> info@example.com<br></p>
-
-                              <div class="social-links">
-                                    <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                    <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                    <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                              <div class="col-lg-4 col-md-6 footer-info">
+                                    <h3>Jean Forteroche</h3>
+                                    <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
                               </div>
-                        </div>
+
+                              <div class="col-lg-3 col-md-6 footer-contact">
+                                    <h4>Me contacter</h4>
+                                    <p>A108 Adam Street <br>
+                                    New York, NY 535022<br>
+                                    United States <br>
+                                    <strong>Téléphone:</strong> 06.48.36.25.48<br>
+                                    <strong>Email:</strong> info@example.com<br></p>
+
+                                    <div class="social-links">
+                                          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                                          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                                          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                    </div>
+                              </div>
                         </div>
                   </div>
             </div>

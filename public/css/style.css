@@ -505,6 +505,7 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   font-weight: 500;
   position: relative;
+  margin-top: 50px;
 }
 
 .section-header p {
@@ -535,7 +536,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .posts {
-  margin-top: 50px;
+  margin-left: 2%;
 }
 
 #services .box {
@@ -543,7 +544,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
-  margin: 0 10px 40px 10px;
+  margin : 0 0 40px 40px;
   background: #fff;
   box-shadow: 0 10px 29px 0 rgba(68, 88, 144, 0.1);
   transition: all 0.3s ease-in-out;
@@ -596,7 +597,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 10px 32px;
   border-radius: 50px;
   transition: 0.5s;
-  margin: 0 40px 40px 0;
   color: #fff;
   background: #bbb2ed;
   border: 2px solid #bbb2ed;
