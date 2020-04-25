@@ -3,7 +3,7 @@
 class CommentDAO extends DAO {
     
     public function getComments($idPost) {
-        $req = 'SELECT id, author, comment, idPost, DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS date_comment FROM comment WHERE idPost = ?';
+        $req = 'SELECT id, author, comment, idPost, reportMessage, DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS date_comment FROM comment WHERE idPost = ?';
         return $this->createQuery($req, [$idPost]);
     }
 
@@ -13,7 +13,7 @@ class CommentDAO extends DAO {
     }
 
     public function signalComment($idComment) {
-        $req = 'UPDATE comment SET report=true WHERE id=?';
+        $req = 'UPDATE comment SET report=true, reportMessage="Commentaire signalé" WHERE id=?';
         return $this->createQuery($req, [$idComment]);
     }
 }

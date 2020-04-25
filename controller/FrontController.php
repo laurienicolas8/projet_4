@@ -6,9 +6,8 @@ class FrontController {
     private $commentDAO;
 
     public function __construct() {
-        require('./DAO/DAO.php');
-        require('./DAO/PostDAO.php');
-        require('./DAO/CommentDAO.php');
+        require('./config/Autoloader.php');
+        Autoloader::register();
         $this->postDAO = new PostDAO;
         $this->commentDAO = new CommentDAO;
     }

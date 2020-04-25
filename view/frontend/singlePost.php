@@ -31,7 +31,8 @@
                 }
                 while ($comment = $comments->fetch()){
                     echo '<div class="comment">
-                            <a href="./index.php?action=reportComment&id='.$comment->id.'&idPost='.$comment->idPost.'" class="report_comment">Signaler ce commentaire</a>
+                            <a href="./index.php?action=reportComment&id='.$comment->id.'&idPost='.$comment->idPost.'" class="report_comment">'.$comment->reportMessage.'</a>
+                            
                             <div class="pseudo_container">
                                 <i class="fas fa-user-circle fa-2x"></i>
                                 <p class="pseudo">'.$comment->author.'</p></div>
@@ -41,7 +42,9 @@
             </div>
         </div>
     </div>
-</section>    
+</section>  
+<script type='text/JavaScript' src='./js/jquery-3.4.1.min.js'></script>
+
 
 <?php
 $content = ob_get_clean();
