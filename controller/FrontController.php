@@ -18,9 +18,9 @@ class FrontController {
         require('./view/frontend/posts.php');
     }
 
-    public function post() {
-        $onePost = $this->postDAO->getPost($_GET['id']);
-        $comments = $this->commentDAO->getComments($_GET['idPost']);
+    public function post($idPost) {
+        $onePost = $this->postDAO->getPost($idPost);
+        $comments = $this->commentDAO->getComments($idPost);
         require('./view/frontend/singlePost.php');
     }
 
@@ -31,7 +31,9 @@ class FrontController {
 
     public function postComment($idPost, $author, $comment) {
         $newComment = $this->commentDAO->addComment($idPost, $author, $comment);
-        $onePost = $this->postDAO->getPost($idPost);
-        require('./view/frontend/singlePost.php');
+    }
+
+    public function reportComment($idComment) {
+        $newReport = $this->commentDAO->signalComment($idComment);
     }
 }

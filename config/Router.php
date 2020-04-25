@@ -17,7 +17,7 @@ class Router {
                 } 
                 elseif ($_GET['action'] == 'post') {
                     if (isset($_GET['id']) && $_GET['id'] > 0) {
-                        $this->frontController->post();
+                        $this->frontController->post($_GET['id']);
                     }
                     else {
                         echo 'Erreur : aucun chapitre n\'a été identifié.';
@@ -25,7 +25,22 @@ class Router {
                 }
                 elseif ($_GET['action'] == 'addComment') {
                     if (isset($_GET['idPost']) && $_GET['idPost'] > 0) {
-                        $this->frontController->addComment();
+                        if (!empty($_POST['author']) && !empty($_POST['comment'])) {
+                            $this->frontController->postComment($_GET['idPost'], $_POST['author'], $_POST['comment']);
+                            $this->frontController->post($_GET['idPost']);
+                        }
+                        else {
+                            echo 'Erreur : champs vides';
+                        }            
+                    }
+                    else {
+                        echo 'Erreur : aucun chapitre n\'a été identifié';
+                    }
+                }
+                elseif ($_GET['action'] == 'reportComment') {
+                    if (isset($_GET['id']) && $_GET['id'] > 0) {
+                        $this->frontController->reportComment($_GET['id']);
+                        $this->frontController->post($_GET['idPost']);
                     }
                 }
             }
