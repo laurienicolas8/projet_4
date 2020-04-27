@@ -13,7 +13,6 @@ class Request {
 
     public function getGet() {
         return $this->get;
-        
     }
 
     public function getPost() {

@@ -1,7 +1,6 @@
 <?php 
 
 class Router {
-
     private $frontController;
     private $request;
 
@@ -13,25 +12,27 @@ class Router {
     }
 
     public function run() {
-        var_dump($this->request->getGet()->get('action'));
+        $action = $this->request->getGet()->get('action');
+        $id = $this->request->getGet()->get('id');
+        $idPost = $this->request->getGet()->get('idPost');
         try {
-            if (isset($_GET['action'])) {
-                if ($_GET['action'] == 'listPosts') {
+            if (isset($action)) {
+                if ($action === 'listPosts') {
                     $this->frontController->listPosts();
                 } 
-                elseif ($_GET['action'] == 'post') {
-                    if (isset($_GET['id']) && $_GET['id'] > 0) {
-                        $this->frontController->post($_GET['id']);
+                elseif ($action === 'post') {
+                    if (isset($id) && $id > 0) {
+                        $this->frontController->post($id);
                     }
                     else {
                         echo 'Erreur : aucun chapitre n\'a été identifié.';
                     }
                 }
-                elseif ($_GET['action'] == 'addComment') {
-                    if (isset($_GET['idPost']) && $_GET['idPost'] > 0) {
+                elseif ($action === 'addComment') {
+                    if (isset($idPost) && $idPost > 0) {
                         if (!empty($_POST['author']) && !empty($_POST['comment'])) {
-                            $this->frontController->postComment($_GET['idPost'], $_POST['author'], $_POST['comment']);
-                            $this->frontController->post($_GET['idPost']);
+                            $this->frontController->postComment($idPost, $_POST['author'], $_POST['comment']);
+                            $this->frontController->post($idPost);
                         }
                         else {
                             echo 'Erreur : champs vides';
@@ -41,10 +42,10 @@ class Router {
                         echo 'Erreur : aucun chapitre n\'a été identifié';
                     }
                 }
-                elseif ($_GET['action'] == 'reportComment') {
-                    if (isset($_GET['id']) && $_GET['id'] > 0) {
-                        $this->frontController->reportComment($_GET['id']);
-                        $this->frontController->post($_GET['idPost']);
+                elseif ($action === 'reportComment') {
+                    if (isset($id) && $id > 0) {
+                        $this->frontController->reportComment($id);
+                        $this->frontController->post($idPost);
                     }
                 }
             }

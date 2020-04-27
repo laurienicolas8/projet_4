@@ -1,7 +1,6 @@
 <?php
 
 class FrontController {
-
     private $postDAO;
     private $commentDAO;
 
