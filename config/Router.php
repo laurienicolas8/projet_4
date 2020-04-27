@@ -3,13 +3,17 @@
 class Router {
 
     private $frontController;
+    private $request;
 
     public function __construct() {
         require('controller/FrontController.php');
+        require('Request.php');
         $this->frontController = new FrontController;
+        $this->request = new Request;
     }
 
     public function run() {
+        var_dump($this->request->getGet()->get('action'));
         try {
             if (isset($_GET['action'])) {
                 if ($_GET['action'] == 'listPosts') {
