@@ -1,16 +1,8 @@
 <?php
+require('Controller.php');
 
-class FrontController {
-    private $postDAO;
-    private $commentDAO;
-
-    public function __construct() {
-        require('./config/Autoloader.php');
-        Autoloader::register();
-        $this->postDAO = new PostDAO;
-        $this->commentDAO = new CommentDAO;
-    }
-
+class FrontController extends Controller {
+    
     public function listPosts() {
         $posts = $this->postDAO->getPosts();
         require('./view/frontend/posts.php');

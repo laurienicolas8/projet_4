@@ -1,5 +1,6 @@
 <?php
+require('Controller.php');
 
-class BackController {
+class BackController extends Controller {
     
 }

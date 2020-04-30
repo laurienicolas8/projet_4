@@ -2,12 +2,15 @@
 
 class Router {
     private $frontController;
+    private $backController;
     private $request;
 
     public function __construct() {
-        require('./config/Autoloader.php');
-        Autoloader::register();
+        require('./controller/FrontController.php');
+        require('./controller/BackController.php');
+        require('Request.php');
         $this->frontController = new FrontController;
+        $this->backController = new BackController;
         $this->request = new Request;
     }
 
