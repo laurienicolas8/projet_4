@@ -5,8 +5,8 @@ class Router {
     private $request;
 
     public function __construct() {
-        require('controller/FrontController.php');
-        require('Request.php');
+        require('./config/Autoloader.php');
+        Autoloader::register();
         $this->frontController = new FrontController;
         $this->request = new Request;
     }
@@ -15,6 +15,7 @@ class Router {
         $action = $this->request->getGet()->get('action');
         $id = $this->request->getGet()->get('id');
         $idPost = $this->request->getGet()->get('idPost');
+
         try {
             if (isset($action)) {
                 if ($action === 'listPosts') {

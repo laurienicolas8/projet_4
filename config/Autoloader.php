@@ -7,6 +7,6 @@ class Autoloader {
     }
     
     public static function autoload($class) {
-        require './DAO/'.$class.'.php';
+        require '../'.$class.'.php';
     }
 }

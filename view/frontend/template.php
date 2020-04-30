@@ -40,6 +40,7 @@
                         <ul>
                         <li class="active"><a href="./index.php">Accueil</a></li>
                         <li><a href="./index.php?action=listPosts">Chapitres</a></li>
+                        <li><a class='admin_button' href="./view/backend/login.php">Connexion administrateur</a></li>
                         </ul>
                   </nav>
             </div>

@@ -5,11 +5,29 @@ header {
     justify-content: center;
     align-items: center;
     color: #323540;
+    position: relative;
 }
 
 header h1 {
-    margin-left: 20px;
+    margin-left: 30px;
 }
+
+.back_to_blog {
+    position: absolute;
+    right: 20px;
+    text-decoration: none;
+    color: #323540;
+    font-weight: bolder;
+    padding: 15px;
+    border: 2px solid #323540;
+    border-radius: 30px;
+}
+
+.back_to_blog:visited {
+    color: #323540;
+}
+
+
 
 body {
     font-family: 'Open Sans';

@@ -23,6 +23,7 @@
     <header>
         <i class="fas fa-book-open fa-4x"></i>
         <h1>Jean Forteroche</h1>
+        <a class='back_to_blog' href='../../index.php'>Retour au blog</a>
     </header>
 
     <?php echo $content ?>
