@@ -2,7 +2,7 @@
 
 <div class='menu'>
     <a href='admin_posts.php'>Chapitres</a>
-    <a href='admin_comments.php' class='active_menu'>Commentaires</a>
+    <a href='./admin_comments.php' class='active_menu'>Commentaires</a>
 </div>
 
 <div class='main'>
@@ -11,5 +11,5 @@
 
 <?php 
 $content = ob_get_clean();
-require('template.php');
+require('template_backend.php');
 ?>

@@ -2,17 +2,6 @@
 require('Controller.php');
 
 class FrontController extends Controller {
-    
-    public function listPosts() {
-        $posts = $this->postDAO->getPosts();
-        require('./view/frontend/posts.php');
-    }
-
-    public function post($idPost) {
-        $onePost = $this->postDAO->getPost($idPost);
-        $comments = $this->commentDAO->getComments($idPost);
-        require('./view/frontend/singlePost.php');
-    }
 
     public function home() {
         $posts = $this->postDAO->getPosts();

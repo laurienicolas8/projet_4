@@ -52,6 +52,15 @@ class Router {
                         $this->frontController->post($idPost);
                     }
                 }
+                elseif ($action === 'login') {
+                    if (isset($_POST['password']) && $_POST['password'] == 'ck87fe1S') {
+                        $this->backController->login($_POST['password']);
+                        $this->backController->admin();
+                    }
+                    else {
+                        echo 'Mot de passe incorrect';
+                    }
+                }
             }
             else {
                 $this->frontController->home();

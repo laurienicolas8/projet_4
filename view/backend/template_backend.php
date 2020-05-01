@@ -15,15 +15,15 @@
             <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
 
             <!-- Template Main CSS File -->
-            <link href="../../public/css/style_backend.css" rel="stylesheet">
+            <link href="../../../projet_4/public/css/style_backend.css" rel="stylesheet">
     </head>
 
     <body>
 
     <header>
-        <i class="fas fa-book-open fa-4x"></i>
-        <h1>Jean Forteroche</h1>
-        <a class='back_to_blog' href='../../index.php'>Retour au blog</a>
+        <p class='hello'>Bonjour, Jean</p>
+        <h1><i class="fas fa-book-open fa-2x"></i></h1>
+        <a class='back_to_blog' href='../../'>Retour au blog</a>
     </header>
 
     <?php echo $content ?>
