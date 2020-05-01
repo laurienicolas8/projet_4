@@ -23,7 +23,7 @@
     <header>
         <p class='hello'>Bonjour, Jean</p>
         <h1><i class="fas fa-book-open fa-2x"></i></h1>
-        <a class='back_to_blog' href='../../'>Retour au blog</a>
+        <a class='back_to_blog' href='../../projet_4/'>Retour au blog</a>
     </header>
 
     <?php echo $content ?>

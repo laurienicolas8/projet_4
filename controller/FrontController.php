@@ -1,5 +1,4 @@
 <?php
-require('Controller.php');
 
 class FrontController extends Controller {
 

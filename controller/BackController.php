@@ -1,14 +1,13 @@
 <?php
-require('Controller.php');
 
 class BackController extends Controller {
     
-    public function login($password) {
+    public function adminPosts() {
+        $posts = $this->postDAO->getPosts();
         require('./view/backend/admin_posts.php');
     }
 
-    public function adminHome() {
-        $this->listPosts();
-        require('../view/backend/admin_posts.php');
+    public function adminComments() {
+        require('./view/backend/admin_comments.php');
     }
 }

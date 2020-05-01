@@ -1,8 +1,8 @@
 <?php ob_start();?>
 
 <div class='menu'>
-    <a href='admin_posts.php' class='active_menu'>Chapitres</a>
-    <a href='admin_comments.php'>Commentaires</a>
+    <a href='../../projet_4/index.php?action=adminPosts' class='active_menu'>Chapitres</a>
+    <a href='../../projet_4/index.php?action=adminComments'>Commentaires</a>
 </div>
 
 <div class='main'>

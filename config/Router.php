@@ -6,6 +6,10 @@ class Router {
     private $request;
 
     public function __construct() {
+        require('./config/Autoloader.php');
+        Autoloader::register();
+
+        require('./controller/Controller.php');
         require('./controller/FrontController.php');
         require('./controller/BackController.php');
         require('Request.php');
@@ -52,14 +56,19 @@ class Router {
                         $this->frontController->post($idPost);
                     }
                 }
-                elseif ($action === 'login') {
+                elseif ($action === 'login'){
                     if (isset($_POST['password']) && $_POST['password'] == 'ck87fe1S') {
-                        $this->backController->login($_POST['password']);
-                        $this->backController->admin();
+                        $this->backController->adminPosts();
                     }
                     else {
                         echo 'Mot de passe incorrect';
                     }
+                }
+                elseif ($action === 'adminPosts') {
+                    $this->backController->adminPosts();
+                }
+                elseif ($action === 'adminComments') {
+                    $this->backController->adminComments();
                 }
             }
             else {
