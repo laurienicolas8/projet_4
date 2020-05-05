@@ -19,9 +19,10 @@ class Router {
     }
 
     public function run() {
-        $action = $this->request->getGet()->get('action');
-        $id = $this->request->getGet()->get('id');
-        $idPost = $this->request->getGet()->get('idPost');
+        $action = $this->request->getGet()->getParam('action');
+        $id = $this->request->getGet()->getParam('id');
+        $idPost = $this->request->getGet()->getParam('idPost');
+        $author = $this->request->getPost()->getParam('author');
 
         try {
             if (isset($action)) {
@@ -29,12 +30,9 @@ class Router {
                     $this->frontController->listPosts();
                 } 
                 elseif ($action === 'post') {
-                    if (isset($id) && $id > 0) {
-                        $this->frontController->post($id);
-                    }
-                    else {
-                        echo 'Erreur : aucun chapitre n\'a été identifié.';
-                    }
+                    
+                    $this->frontController->post($id);
+                    
                 }
                 elseif ($action === 'addComment') {
                     if (isset($idPost) && $idPost > 0) {
@@ -57,15 +55,18 @@ class Router {
                     }
                 }
                 elseif ($action === 'login'){
+                    $this->backController->login();                    
+                }
+                elseif ($action === 'accessAdmin'){
                     if (isset($_POST['password']) && $_POST['password'] == 'ck87fe1S') {
-                        $this->backController->adminPosts();
+                        $this->backController->accessAdmin();
                     }
                     else {
                         echo 'Mot de passe incorrect';
                     }
                 }
-                elseif ($action === 'adminPosts') {
-                    $this->backController->adminPosts();
+                elseif ($action === 'adminPosts') {                
+                    $this->backController->adminPosts();                    
                 }
                 elseif ($action === 'adminComments') {
                     $this->backController->adminComments();

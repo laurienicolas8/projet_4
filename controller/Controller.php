@@ -15,8 +15,13 @@ class Controller {
     }
 
     public function post($idPost) {
-        $onePost = $this->postDAO->getPost($idPost);
-        $comments = $this->commentDAO->getComments($idPost);
-        require('./view/frontend/singlePost.php');
+        if (isset($idPost) && $idPost > 0) {
+            $onePost = $this->postDAO->getPost($idPost);
+            $comments = $this->commentDAO->getComments($idPost);
+            require('./view/frontend/singlePost.php');
+        }
+        else {
+            echo 'Erreur : aucun chapitre n\'a été identifié.';
+        }
     }
 }

@@ -7,13 +7,13 @@ class ReqParameter {
         $this->parameter = $parameter;
     }
 
-    public function get($name) {
+    public function getParam($name) {
         if (isset($this->parameter[$name])) {
             return $this->parameter[$name];
         }
     }
 
-    public function set($name, $value) {
+    public function setParam($name, $value) {
         $this->parameter[$name] = $value;
     }
 }

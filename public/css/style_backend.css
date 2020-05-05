@@ -1,6 +1,6 @@
 header {
     background-color: #fff;
-    height: 70px;
+    height: 80px;
     display: flex;
     align-items: center;
     color: #323540;
@@ -89,10 +89,9 @@ body {
     display: flex;
     justify-content: space-around;
     width: 100%;
-
 }
 
-.menu a {
+.element_menu {
     font-family: 'Fredoka One';
     padding: 20px 0;
     font-size: 2.3em;
@@ -102,14 +101,88 @@ body {
     letter-spacing: 0.1em;
     cursor: pointer;
     text-decoration: none;
+    background-color: #A7A7A8;
+}
+
+.element_menu:hover {
+    background-color: #D2D2D4;
+    text-decoration: none;
+    color: white;
 }
 
 .active_menu {
-    border-bottom: 5px solid #bbb2ed;
+    border-bottom: 10px solid white;
 }
 
 .main {
     width: 100%;
-    background-color: white;
+    background-color: #D2D2D4;
+    margin: 20px 30px;
+    color: #323540;
+}
 
+.elements_container {
+    margin: 40px auto;
+}
+
+.posts_admin {
+    background-color: white;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    position: relative;
+    margin-bottom: 25px;
+    height: 90px;
+    border-radius: 8px;
+}
+
+.posts_admin:hover {
+    background-color: #D2D2D4;
+}
+
+.title {
+    color: #323540;
+    margin-left: 25px;
+}
+
+.title:hover {
+    text-decoration: none;
+    color: #323540;
+    cursor: pointer;
+}
+
+#new_chapter_button {
+    display: flex;
+    margin-bottom: 60px;
+    overflow: hidden;
+    height: 70px;
+}
+
+#new_chapter_title {
+    color: #323540;
+    margin-left: 95px;
+}
+
+#new_chapter_title:hover {
+    cursor: pointer;
+}
+
+#new_chapter_button i {
+    position: absolute;
+    left: -15px;
+}
+
+.options {
+    position: absolute;
+    right: 20px;
+}
+
+.options a {
+    color: #323540;
+    margin-left: 15px;
+    font-size: 1.2em;
+}
+
+.options a:hover {
+    text-decoration: none;
 }
