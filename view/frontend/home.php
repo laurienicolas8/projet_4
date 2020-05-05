@@ -8,9 +8,7 @@
         </div>
 
         <div class="intro-info">
-            <h2>Bienvenue.<br><span>Lorem ipsum dolor sit amet consectetur, adipisicing 
-            elit. Nisi quo culpa praesentium quis alias saepe quae fugiat dicta labore 
-            odio ratione, veniam, hic voluptas facere tempora eos nemo omnis quaerat!
+            <h2>"<i> Billet simple pour l'Alaska </i>"<br><br><span>Bonjour à toutes et à tous, et bienvenue sur mon blog. Je partage avec vous mon dernier roman en date, <i>Billet simple pour l'Alaska</i>. Vous le trouverez sous forme de chapitres, d'épisodes et je vous invite à me donner votre avis dans les commentaires ! Enjoy !
             </span><br></h2>
             <div>
                 <a href="#services" class="btn-get-started">Commencer</a>
@@ -23,7 +21,6 @@
     <div class="container">
         <header class="section-header">
             <h3>Commencer l'aventure</h3>
-            <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus.</p>
         </header>
 
         <div class="row col-lg-12">

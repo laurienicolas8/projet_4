@@ -62,7 +62,7 @@
                               <img src="./public/images/testimonial-3.jpg" class="testimonial-img" alt="Photo de l'auteur"/>
                               <h3>Jean Forteroche</h3>
                               <h4>Ecrivain</h4>
-                              <p>Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.</p>
+                              <p>"J'écris des romans depuis maintenant plus de 35 ans. J'ai décidé de créer un blog pour avoir plus facilement les retours de mes lecteurs, j'aimerais savoir ce qu'ils pensent de mes histoires. J'espère qu'ils savoureront ce web-bouquin comme un vrai !"</p>
                         </div>
                         </div>
                   </div>
@@ -72,10 +72,10 @@
             <footer id="footer">
             <div class="footer-top">
                   <div class="container">
-                        <div class="row">
+                        <div class="row footer">
                               <div class="col-lg-4 col-md-6 footer-info">
                                     <h3>Jean Forteroche</h3>
-                                    <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+                                    <p>Auteur de "La Longue Nuit" et "Arme au poing", Jean Forteroche partage aujourd'hui son nouveau roman "Billet simple pour l'Alaska" déjà best-seller en France. </p>
                               </div>
 
                               <div class="col-lg-3 col-md-6 footer-contact">

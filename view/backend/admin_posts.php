@@ -1,11 +1,6 @@
 <?php ob_start();?>
 
-<div class='menu'>
-    <a href='../../projet_4/index.php?action=adminPosts' class='active_menu element_menu'>Chapitres</a>
-    <a href='../../projet_4/index.php?action=adminComments' class='element_menu'>Commentaires</a>
-</div>
-
-<div class='row'>
+<div class='row col-lg-12'>
     <div class='main col-lg-12'>
         <div class='elements_container col-lg-10'>
             <div class='posts_admin col-lg-12' id='new_chapter_button'>

@@ -15,8 +15,14 @@ class BackController extends Controller {
         require('./view/backend/login.php');
     }
 
-    public function accessAdmin() {
-        $posts = $this->postDAO->getPosts();
-        require('./view/backend/admin_posts.php');
+    public function access($password) {
+        if (isset($password) && $password == 'ck87fe1S') {
+            session_start();
+            $posts = $this->postDAO->getPosts();
+            require('./view/backend/admin_posts.php');
+        }
+        else {
+            echo 'Mot de passe incorrect';
+        }
     }
 }

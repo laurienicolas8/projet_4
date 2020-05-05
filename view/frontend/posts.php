@@ -3,7 +3,7 @@
 <section id="services" class="section-bg posts">
     <div class="container">
         <header class="section-header">
-            <h3>Tous les chapitres</h3>
+            <h3 class='posts-head'>Tous les chapitres</h3>
         </header>
 
         <div class="row col-lg-12">

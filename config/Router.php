@@ -8,11 +8,11 @@ class Router {
     public function __construct() {
         require('./config/Autoloader.php');
         Autoloader::register();
-
         require('./controller/Controller.php');
         require('./controller/FrontController.php');
         require('./controller/BackController.php');
         require('Request.php');
+
         $this->frontController = new FrontController;
         $this->backController = new BackController;
         $this->request = new Request;
@@ -23,53 +23,56 @@ class Router {
         $id = $this->request->getGet()->getParam('id');
         $idPost = $this->request->getGet()->getParam('idPost');
         $author = $this->request->getPost()->getParam('author');
+        $comment = $this->request->getPost()->getParam('comment');
+        $password = $this->request->getPost()->getParam('password');
+        $session = $this->request->getSession()->get('admin');
 
         try {
             if (isset($action)) {
-                if ($action === 'listPosts') {
-                    $this->frontController->listPosts();
-                } 
-                elseif ($action === 'post') {
-                    
-                    $this->frontController->post($id);
-                    
-                }
-                elseif ($action === 'addComment') {
-                    if (isset($idPost) && $idPost > 0) {
-                        if (!empty($_POST['author']) && !empty($_POST['comment'])) {
-                            $this->frontController->postComment($idPost, $_POST['author'], $_POST['comment']);
-                            $this->frontController->post($idPost);
+                switch ($action) {
+                    case 'listPosts':
+                        $this->frontController->listPosts(); 
+                    break;
+
+                    case 'post':
+                        $this->frontController->post($id);
+                    break;
+
+                    case 'addComment':
+                        if (!empty($author) && !empty($comment)) {
+                            $this->frontController->postComment($idPost, $author, $comment);
+                            $this->frontController->post($idPost);  
                         }
                         else {
                             echo 'Erreur : champs vides';
-                        }            
-                    }
-                    else {
-                        echo 'Erreur : aucun chapitre n\'a été identifié';
-                    }
-                }
-                elseif ($action === 'reportComment') {
-                    if (isset($id) && $id > 0) {
+                        }                       
+                    break;
+
+                    case 'reportComment':                        
                         $this->frontController->reportComment($id);
-                        $this->frontController->post($idPost);
-                    }
-                }
-                elseif ($action === 'login'){
-                    $this->backController->login();                    
-                }
-                elseif ($action === 'accessAdmin'){
-                    if (isset($_POST['password']) && $_POST['password'] == 'ck87fe1S') {
-                        $this->backController->accessAdmin();
-                    }
-                    else {
-                        echo 'Mot de passe incorrect';
-                    }
-                }
-                elseif ($action === 'adminPosts') {                
-                    $this->backController->adminPosts();                    
-                }
-                elseif ($action === 'adminComments') {
-                    $this->backController->adminComments();
+                        $this->frontController->post($idPost);                        
+                    break;
+
+                    case 'login':
+                        if (isset($session)) {
+                            $this->backController->adminPosts();
+                        }
+                        else {
+                            $this->backController->login();
+                        }
+                    break;
+
+                    case 'accessAdmin':                        
+                        $this->backController->access($password);                        
+                    break;
+
+                    case 'adminPosts':
+                        $this->backController->adminPosts();
+                    break;
+                    
+                    case 'adminComments':
+                       $this->backController->adminComments();
+                    break;
                 }
             }
             else {

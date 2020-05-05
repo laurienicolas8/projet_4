@@ -31,8 +31,13 @@
     <header>
         <p class='hello'>Bonjour, Jean</p>
         <h1><i class="fas fa-book-open fa-2x"></i></h1>
-        <a class='back_to_blog' href='./index.php'>Retour au blog</a>
+        <a class='back_to_blog deconnection' href='./index.php'>Retour au blog</a>
     </header>
+
+    <div class='menu'>
+        <a href='../../projet_4/index.php?action=adminPosts' class='active_menu element_menu'>Chapitres</a><br>
+        <a href='../../projet_4/index.php?action=adminComments' class='element_menu'>Commentaires</a>
+    </div>
 
     <?php echo $content ?>
 
