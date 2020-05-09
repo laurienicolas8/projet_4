@@ -7,6 +7,21 @@ class BackController extends Controller {
         require('./view/backend/admin_posts.php');
     }
 
+    public function adminPost($idPost) {
+        if (isset($idPost) && $idPost > 0) {
+            $onePost = $this->postDAO->getPost($idPost);
+            require('./view/backend/admin_post.php');
+        }
+    }
+
+    public function deletePost($idPost) {
+        if (isset($idPost) && $idPost > 0) {
+            $this->postDAO->supprPost($idPost);
+            $posts = $this->postDAO->getPosts();
+            require('./view/backend/admin_posts.php');
+        }
+    }
+
     public function adminComments() {
         require('./view/backend/admin_comments.php');
     }

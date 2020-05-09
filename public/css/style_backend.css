@@ -1,10 +1,12 @@
 header {
     background-color: #fff;
     height: 80px;
+    width: 100%;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     color: #323540;
-    position: relative;
+    position: fixed;
     padding-left: 30px;
     z-index: 2;
 }
@@ -14,27 +16,29 @@ header h1 {
 }
 
 .hello {
-    position: absolute;
-    left: 20px;
     bottom: 5px;
     font-weight: bold;
 }
 
 .back_to_blog {
-    position: absolute;
-    right: 20px;
     text-decoration: none;
     color: #323540;
     font-weight: bolder;
     padding: 15px;
     border: 2px solid #323540;
     border-radius: 30px;
+    margin-right: 20px;
+    transition: all 400ms;
+}
+
+.back_to_blog:hover {
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 .back_to_blog:visited {
     color: #323540;
 }
-
 
 body {
     font-family: 'Open Sans';
@@ -51,8 +55,7 @@ body {
     justify-content: space-around;
     align-items: center;
     background: #fff;
-    margin-top: 15vh;
-    transform: translateY(-15%);
+    transform: translateY(35%);
     border-radius: 5%;
 }
 
@@ -86,7 +89,7 @@ body {
 }
 
 .menu {
-    width: 250px;
+    width: 340px;
     z-index: 1;
     position: fixed;
     display: flex;
@@ -94,7 +97,9 @@ body {
     top: 0;
     left: 0;
     bottom: 0;
-    padding-top: 80px;
+    padding-top: 110px;
+    background-color: #E3E3E6;
+    box-shadow: 3px 3px 3px #9C9C9C;
 }
 
 .element_menu {
@@ -106,25 +111,64 @@ body {
     text-decoration: none;
 }
 
+.element_submenu {
+    font-size: 1.2em;
+    text-align: center;
+    color: #868687;
+    cursor: pointer;
+    text-decoration: none;
+    padding: 15px;
+    font-weight: bold;
+    transition: all 400ms;
+}
+
+.list_menu {
+    list-style-type: none;
+    width: 110%;
+    margin: 20px 0;
+    padding: 0;
+}
+
+.element_submenu:hover {
+    text-decoration: none;
+    color: black;
+}
+
 .element_menu:hover {
-    background-color: #D2D2D4;
     text-decoration: none;
     color: white;
 }
 
-.active_menu {
-    border-bottom: 10px solid white;
+.menu ul {
+    margin: 0;
+    padding-left: 0;
+    padding-right: 15px;
+}
+
+.first_list_menu {
+    background-color: rgba(187, 178, 237);
+    border-bottom-right-radius: 40px;
+    border-top-right-radius: 40px;
+    padding: 5px;
+    list-style-type: none;
+    text-align: center;
+    transition: all 400ms;
+}
+
+.first_list_menu:hover {
+    background-color: #9C9C9C;
 }
 
 .main {
     width: 100%;
-    background-color: #D2D2D4;
-    margin-left: 140px;
+    background-color: #d2d2d4;
+    margin-left: 340px;
     color: #323540;
+    padding-top: 90px;
 }
 
 .elements_container {
-    margin: 40px auto;
+    margin: 40px 10px;
 }
 
 .posts_admin {
@@ -136,21 +180,24 @@ body {
     margin-bottom: 25px;
     height: 90px;
     border-radius: 8px;
+    width: 90%;
+    transition: all 400ms;
 }
 
 .posts_admin:hover {
-    background-color: #D2D2D4;
+    background-color: #d2d2d4;
 }
 
 .title {
     color: #323540;
     margin-left: 25px;
+    transition: all 400ms;
 }
 
 .title:hover {
     text-decoration: none;
-    color: #323540;
     cursor: pointer;
+    color: #323540;
 }
 
 #new_chapter_button {
@@ -177,14 +224,88 @@ body {
 .options {
     position: absolute;
     right: 20px;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .options a {
     color: #323540;
-    margin-left: 15px;
-    font-size: 1.2em;
 }
 
 .options a:hover {
     text-decoration: none;
+}
+
+.element_options {
+    transition: all 400ms;
+}
+
+.element_options:hover {
+    font-weight: bold;
+}
+
+.info_container {
+    position: relative;
+}
+
+.label {
+    font-size: 1.3em;
+    padding: 20px;
+    font-weight: 600;
+    width: 20%;
+}
+
+.info {
+    width: 70%;
+    padding: 15px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.infos_and_labels {
+    display: flex;
+    margin: 40px 10px;
+}
+
+.button_container {
+    width: 92%;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 40px;
+}
+
+.option_button {
+    color: white;
+    padding: 15px;
+    border-radius: 40px;
+    transition: all 200ms;
+    font-size: 1.2em;
+}
+
+.option_button:hover {
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+#modify_button {
+    background-color: #147BEB;
+}
+
+#delete_button {
+    background-color: #EB352D;
+}
+
+.go_back {
+    color: black;
+    position: absolute;
+    left: 0;
+    transition: all 200ms;
+}
+
+.go_back:hover {
+    color: black;
+    transform: scale(1.2);
 }

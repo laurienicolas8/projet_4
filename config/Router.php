@@ -25,7 +25,7 @@ class Router {
         $author = $this->request->getPost()->getParam('author');
         $comment = $this->request->getPost()->getParam('comment');
         $password = $this->request->getPost()->getParam('password');
-        $session = $this->request->getSession()->get('admin');
+        //$session = $this->request->getSession()->get('admin');
 
         try {
             if (isset($action)) {
@@ -68,6 +68,14 @@ class Router {
 
                     case 'adminPosts':
                         $this->backController->adminPosts();
+                    break;
+
+                    case 'adminPost':
+                        $this->backController->adminPost($idPost);
+                    break;
+
+                    case 'deletePost':
+                        $this->backController->deletePost($idPost);
                     break;
                     
                     case 'adminComments':

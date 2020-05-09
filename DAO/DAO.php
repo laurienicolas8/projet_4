@@ -6,7 +6,7 @@ class DAO {
     const DB_PASS = '';
     private $connection; //stocke la connexion s'il y en a une, sinon renvoie null
 
-    private function checkConnection() {
+    protected function checkConnection() {
         if ($this->connection===null) {
             return $this->dbConnection();
         }

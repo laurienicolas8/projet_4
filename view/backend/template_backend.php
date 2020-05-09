@@ -31,12 +31,22 @@
     <header>
         <p class='hello'>Bonjour, Jean</p>
         <h1><i class="fas fa-book-open fa-2x"></i></h1>
-        <a class='back_to_blog deconnection' href='./index.php'>Retour au blog</a>
+        <a class='back_to_blog' href='./index.php'>Retour au blog</a>
     </header>
 
     <div class='menu'>
-        <a href='../../projet_4/index.php?action=adminPosts' class='active_menu element_menu'>Chapitres</a><br>
-        <a href='../../projet_4/index.php?action=adminComments' class='element_menu'>Commentaires</a>
+        <ul>
+            <li class='first_list_menu'><a href='./index.php?action=adminPosts' class='element_menu'>Chapitres</a></li>
+            <ul>
+                <li class='list_menu'><a href='./index.php?action=adminPosts' class='element_submenu'>Tous les chapitres</a></li>
+                <li class='list_menu'><a href='' class='element_submenu'>Ecrire un nouveau chapitre</a></li>
+            </ul>
+            <li class='first_list_menu'><a href='./index.php?action=adminComments' class='element_menu'>Commentaires</a></li>
+            <ul>
+                <li class='list_menu'><a href='./index.php?action=adminComments' class='element_submenu'>Commentaires par chapitre</a></li>
+                <li class='list_menu'><a href='' class='element_submenu'>Commentaires signalés</a></li>
+            </ul>
+        </ul>
     </div>
 
     <?php echo $content ?>
