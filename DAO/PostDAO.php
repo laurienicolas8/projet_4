@@ -12,6 +12,11 @@ class PostDAO extends DAO {
         return $this->createQuery($req, [$idPost]);
     }
 
+    public function createPost($num, $title, $excerpt, $content) {
+        $req = 'INSERT INTO post (num, title, excerpt, content, creationDate) VALUES (?, ?, ?, ?, NOW())';
+        return $this->createQuery($req, [$num, $title, $excerpt, $content]);
+    }
+
     public function supprPost($idPost) {
         $req = $this->checkConnection()->prepare('DELETE FROM post WHERE id = ?');
         $req->execute([$idPost]);

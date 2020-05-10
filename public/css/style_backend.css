@@ -214,6 +214,7 @@ body {
 
 #new_chapter_title:hover {
     cursor: pointer;
+    text-decoration: none;
 }
 
 #new_chapter_button i {
@@ -266,6 +267,7 @@ body {
 
 .infos_and_labels {
     display: flex;
+    align-items: flex-start;
     margin: 40px 10px;
 }
 
@@ -308,4 +310,52 @@ body {
 .go_back:hover {
     color: black;
     transform: scale(1.2);
+}
+
+.edit_container {
+    position: relative;
+}
+
+.edit_h1 {
+    text-align: center;
+}
+
+.info_edit {
+    margin-top: 20px;
+    padding: 5px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.info_edit.numPost {
+    width: 5%;
+}
+
+.info_edit.titlePost {
+    width: 15%;
+}
+
+.info_edit.excerptPost {
+    width: 70%;
+    height: 120px;
+}
+
+.tox-tinymce {
+    width: 70%;
+}
+
+.info_edit.contentPost {
+    height: 600px;
+}
+
+.asterisque {
+    color: #F01800;
+    font-size: 0.7em;
+}
+
+.button_editPost {
+    background-color: #147BEB;
+    position: absolute;
+    margin-bottom: 40px;
+    left: 39%;
 }

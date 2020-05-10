@@ -22,6 +22,15 @@ class BackController extends Controller {
         }
     }
 
+    public function editPost() {
+        require('./view/backend/admin_new.php');
+    }
+
+    public function addPost($num, $title, $excerpt, $content) {
+        $this->postDAO->createPost($num, $title, $excerpt, $content);
+        require('./view/backend/addPost_done.php');
+    }
+
     public function adminComments() {
         require('./view/backend/admin_comments.php');
     }

@@ -5,7 +5,7 @@
         <div class='elements_container col-lg-10'>
             <div class='posts_admin col-lg-12' id='new_chapter_button'>
                 <i class="fas fa-plus-circle fa-6x"></i>
-                <h4 id='new_chapter_title'>Ecrire un nouveau chapitre</h4>
+                <h4><a href='./index.php?action=editPost' id='new_chapter_title'>Ecrire un nouveau chapitre</a></h4>
             </div>
 
             <?php

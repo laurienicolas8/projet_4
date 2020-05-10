@@ -8,7 +8,7 @@ class CommentDAO extends DAO {
     }
 
     public function addComment($idPost, $author, $comment) {
-        $req = 'INSERT INTO comment (idPost, author, comment, creationDate, report) VALUES (?, ?, ?, NOW(), false)';
+        $req = 'INSERT INTO comment (idPost, author, comment, creationDate, report, reportMessage) VALUES (?, ?, ?, NOW(), false, "Signaler ce commentaire")';
         return $this->createQuery($req, [$idPost, $author, $comment]);
     }
 

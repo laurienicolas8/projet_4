@@ -25,6 +25,10 @@ class Router {
         $author = $this->request->getPost()->getParam('author');
         $comment = $this->request->getPost()->getParam('comment');
         $password = $this->request->getPost()->getParam('password');
+        $numPost = $this->request->getPost()->getParam('num');
+        $titlePost = $this->request->getPost()->getParam('title');
+        $excerptPost = $this->request->getPost()->getParam('excerpt');
+        $contentPost = $this->request->getPost()->getParam('content');
         //$session = $this->request->getSession()->get('admin');
 
         try {
@@ -76,6 +80,14 @@ class Router {
 
                     case 'deletePost':
                         $this->backController->deletePost($idPost);
+                    break;
+
+                    case 'editPost':
+                        $this->backController->editPost();
+                    break;
+
+                    case 'addPost':
+                        $this->backController->addPost($numPost, $titlePost, $excerptPost, $contentPost);
                     break;
                     
                     case 'adminComments':
