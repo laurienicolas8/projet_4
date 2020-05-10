@@ -39,8 +39,8 @@
                   <nav class="main-nav float-right d-none d-lg-block">
                         <ul>
                         <li class="active"><a href="./index.php">Accueil</a></li>
-                        <li><a href="./index.php?action=listPosts">Chapitres</a></li>
-                        <li><a class='admin_button' href="./index.php?action=login">Connexion administrateur</a></li>
+                        <li><a href="./index.php?action=allPosts">Chapitres</a></li>
+                        <li><a class='admin_button' href="./index.php?action=loginPage">Connexion administrateur</a></li>
                         </ul>
                   </nav>
             </div>

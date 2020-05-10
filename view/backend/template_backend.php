@@ -39,14 +39,14 @@
 
     <div class='menu'>
         <ul>
-            <li class='first_list_menu'><a href='./index.php?action=adminPosts' class='element_menu'>Chapitres</a></li>
+            <li class='first_list_menu'><a href='./index.php?action=dashboardPosts' class='element_menu'>Chapitres</a></li>
             <ul>
-                <li class='list_menu'><a href='./index.php?action=adminPosts' class='element_submenu'>Tous les chapitres</a></li>
+                <li class='list_menu'><a href='./index.php?action=dashboardPosts' class='element_submenu'>Tous les chapitres</a></li>
                 <li class='list_menu'><a href='./index.php?action=editPost' class='element_submenu'>Ecrire un nouveau chapitre</a></li>
             </ul>
-            <li class='first_list_menu'><a href='./index.php?action=adminComments' class='element_menu'>Commentaires</a></li>
+            <li class='first_list_menu'><a href='./index.php?action=dashboardComments' class='element_menu'>Commentaires</a></li>
             <ul>
-                <li class='list_menu'><a href='./index.php?action=adminComments' class='element_submenu'>Tous les commentaires</a></li>
+                <li class='list_menu'><a href='./index.php?action=dashboardComments' class='element_submenu'>Tous les commentaires</a></li>
                 <li class='list_menu'><a href='' class='element_submenu'>Commentaires signalés</a></li>
             </ul>
         </ul>

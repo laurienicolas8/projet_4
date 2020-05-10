@@ -34,7 +34,7 @@
             <a class='back_to_blog' href='./index.php'>Retour au blog</a>
         </header>
 
-        <form action='./index.php?action=accessAdmin' method='post' class='form_login'>
+        <form action='./index.php?action=accessDashboard' method='post' class='form_login'>
             <h1 class='h1_login'>Connectez-vous</h1>
             <label class='label_login'>Mot de passe :</label><input name='password' type='text'> 
             <input type='submit' value='Connexion' class='button_login'>

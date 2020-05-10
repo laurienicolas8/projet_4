@@ -3,7 +3,7 @@
 <div class='row col-lg-12'>
     <div class='main col-lg-12'>
         <div class='edit_container col-lg-10'>
-            <a href='./index.php?action=adminPosts' class='go_back'><i class="fas fa-arrow-left fa-2x"></i></a>
+            <a href='./index.php?action=dashboardPosts' class='go_back'><i class="fas fa-arrow-left fa-2x"></i></a>
             <h1 class='edit_h1'>Editer un nouveau chapitre</h1>
 
             <form method="post" action='./index.php?action=addPost' id="edit_form">
