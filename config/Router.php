@@ -19,33 +19,33 @@ class Router {
     }
 
     public function run() {
-        $action = $this->request->getGet()->getParam('action');
-        $id = $this->request->getGet()->getParam('id');
-        $idPost = $this->request->getGet()->getParam('idPost');
-        $author = $this->request->getPost()->getParam('author');
-        $comment = $this->request->getPost()->getParam('comment');
-        $password = $this->request->getPost()->getParam('password');
-        $numPost = $this->request->getPost()->getParam('num');
-        $titlePost = $this->request->getPost()->getParam('title');
-        $excerptPost = $this->request->getPost()->getParam('excerpt');
-        $contentPost = $this->request->getPost()->getParam('content');
-        //$session = $this->request->getSession()->get('admin');
+        $action = $this->request->reqGet()->getParam('action');
+        $id = $this->request->reqGet()->getParam('id');
+        $idPost = $this->request->reqGet()->getParam('idPost');
+        $author = $this->request->reqPost()->getParam('author');
+        $comment = $this->request->reqPost()->getParam('comment');
+        $password = $this->request->reqPost()->getParam('password');
+        $numPost = $this->request->reqPost()->getParam('num');
+        $titlePost = $this->request->reqPost()->getParam('title');
+        $excerptPost = $this->request->reqPost()->getParam('excerpt');
+        $contentPost = $this->request->reqPost()->getParam('content');
+        //$session = $this->request->reqSession()->get('admin');
 
         try {
             if (isset($action)) {
                 switch ($action) {
-                    case 'listPosts':
-                        $this->frontController->listPosts(); 
+                    case 'allPosts':
+                        $this->frontController->allPosts(); 
                     break;
 
-                    case 'post':
-                        $this->frontController->post($id);
+                    case 'singlePost':
+                        $this->frontController->singlePost($id);
                     break;
 
                     case 'addComment':
                         if (!empty($author) && !empty($comment)) {
-                            $this->frontController->postComment($idPost, $author, $comment);
-                            $this->frontController->post($idPost);  
+                            $this->frontController->addComment($idPost, $author, $comment);
+                            $this->frontController->singlePost($idPost);  
                         }
                         else {
                             echo 'Erreur : champs vides';
@@ -54,28 +54,28 @@ class Router {
 
                     case 'reportComment':                        
                         $this->frontController->reportComment($id);
-                        $this->frontController->post($idPost);                        
+                        $this->frontController->singlePost($idPost);                        
                     break;
 
-                    case 'login':
+                    case 'loginPage':
                         if (isset($session)) {
-                            $this->backController->adminPosts();
+                            $this->backController->dashboardPosts();
                         }
                         else {
-                            $this->backController->login();
+                            $this->backController->loginPage();
                         }
                     break;
 
-                    case 'accessAdmin':                        
-                        $this->backController->access($password);                        
+                    case 'accessDashboard':                        
+                        $this->backController->accessDashboard($password);                        
                     break;
 
-                    case 'adminPosts':
-                        $this->backController->adminPosts();
+                    case 'dashboardPosts':
+                        $this->backController->dashboardPosts();
                     break;
 
-                    case 'adminPost':
-                        $this->backController->adminPost($idPost);
+                    case 'infoPost':
+                        $this->backController->infoPost($idPost);
                     break;
 
                     case 'deletePost':
@@ -90,8 +90,8 @@ class Router {
                         $this->backController->addPost($numPost, $titlePost, $excerptPost, $contentPost);
                     break;
                     
-                    case 'adminComments':
-                       $this->backController->adminComments();
+                    case 'dashboardComments':
+                       $this->backController->dashboardComments();
                     break;
                 }
             }

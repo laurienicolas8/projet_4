@@ -13,15 +13,15 @@ class Request {
         //$this->session = new Session($_SESSION);
     }
 
-    public function getGet() {
+    public function reqGet() {
         return $this->get;
     }   
 
-    public function getPost() {
+    public function reqPost() {
         return $this->post;
     }
 
-    /*public function getSession() {
+    /*public function reqSession() {
         return $this->session;
     }*/
 }

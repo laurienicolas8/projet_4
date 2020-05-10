@@ -9,12 +9,12 @@ class Controller {
         $this->commentDAO = new CommentDAO;
     }
 
-    public function listPosts() {
+    public function allPosts() {
         $posts = $this->postDAO->getPosts();
         require('./view/frontend/posts.php');
     }
 
-    public function post($idPost) {
+    public function singlePost($idPost) {
         if (isset($idPost) && $idPost > 0) {
             $onePost = $this->postDAO->getPost($idPost);
             $comments = $this->commentDAO->getComments($idPost);

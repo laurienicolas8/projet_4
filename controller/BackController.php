@@ -2,12 +2,12 @@
 
 class BackController extends Controller {
     
-    public function adminPosts() {
+    public function dashboardPosts() {
         $posts = $this->postDAO->getPosts();
         require('./view/backend/dashboard_posts.php');
     }
 
-    public function adminPost($idPost) {
+    public function infoPost($idPost) {
         if (isset($idPost) && $idPost > 0) {
             $onePost = $this->postDAO->getPost($idPost);
             require('./view/backend/info_post.php');
@@ -31,15 +31,15 @@ class BackController extends Controller {
         require('./view/backend/added_post.php');
     }
 
-    public function adminComments() {
+    public function dashboardComments() {
         require('./view/backend/dashboard_comments.php');
     }
 
-    public function login() {
+    public function loginPage() {
         require('./view/backend/login_page.php');
     }
 
-    public function access($password) {
+    public function accessDashboard($password) {
         if (isset($password) && $password == 'ck87fe1S') {
             session_start();
             $posts = $this->postDAO->getPosts();
