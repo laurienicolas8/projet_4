@@ -24,7 +24,7 @@
             <link href="./public/vendor/venobox/venobox.css" rel="stylesheet">
 
             <!-- Template Main CSS File -->
-            <link href="./public/css/style.css" rel="stylesheet">
+            <link href="./public/css/style_frontend.css" rel="stylesheet">
       </head>
 
       <body>

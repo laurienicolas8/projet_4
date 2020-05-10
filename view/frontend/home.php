@@ -44,5 +44,5 @@
 
 <?php 
 $content = ob_get_clean();
-require('template.php');
+require('template_frontend.php');
 ?>
