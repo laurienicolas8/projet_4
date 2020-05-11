@@ -32,7 +32,13 @@ class BackController extends Controller {
     }
 
     public function dashboardComments() {
+        $comments = $this->commentDAO->getAllComments();
         require('./view/backend/dashboard_comments.php');
+    }
+
+    public function reportedComments() {
+        $reportedComments = $this->commentDAO->getReportedComments();
+        require('./view/backend/reported_comments.php');
     }
 
     public function loginPage() {

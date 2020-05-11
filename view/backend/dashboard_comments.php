@@ -1,6 +1,29 @@
 <?php ob_start();?>
 
+<div class='row col-lg-12'>
+    <div class='main col-lg-12'>
+        <div class='elements_container col-lg-10'>
+            <h1 class='all_h1'>Tous les commentaires</h1>
 
+            <?php
+            foreach ($comments->fetchAll(PDO::FETCH_CLASS) as $comment) {
+                echo '<div class="admin_comments col-lg-11">
+                        <div class="header_comment">
+                            <i class="far fa-comment fa-2x"></i>
+                            <p><span class="author_comment">'.$comment->author.'</span>, posté le '.$comment->creationDate.'</p>
+                        </div>                        
+                        <p>'.$comment->comment.'</p>
+                        <div class="options_comments">
+                            <a href="" class="element_options"><i class="far fa-eye"></i> Voir</a>
+                            <a href="" class="element_options"><i class="fas fa-pen"></i> Modifier</a>
+                            <a href="" class="element_options"><i class="fas fa-trash"></i> Supprimer</a>
+                        </div>                    
+                    </div>';
+            }
+            ?>
+        </div>
+    </div>
+</div>
 
 
 <?php 

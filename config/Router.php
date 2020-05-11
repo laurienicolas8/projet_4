@@ -93,6 +93,10 @@ class Router {
                     case 'dashboardComments':
                        $this->backController->dashboardComments();
                     break;
+
+                    case 'reportedComments':
+                        $this->backController->reportedComments();
+                    break;
                 }
             }
             else {

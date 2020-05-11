@@ -47,7 +47,7 @@
             <li class='first_list_menu'><a href='./index.php?action=dashboardComments' class='element_menu'>Commentaires</a></li>
             <ul>
                 <li class='list_menu'><a href='./index.php?action=dashboardComments' class='element_submenu'>Tous les commentaires</a></li>
-                <li class='list_menu'><a href='' class='element_submenu'>Commentaires signalés</a></li>
+                <li class='list_menu'><a href='./index.php?action=reportedComments' class='element_submenu'>Commentaires signalés</a></li>
             </ul>
         </ul>
     </div>
