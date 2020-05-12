@@ -14,6 +14,13 @@ class BackController extends Controller {
         }
     }
 
+    public function confirmDelete($idPost) {
+        if (isset($idPost) && $idPost > 0) {
+            $onePost = $this->postDAO->getPost($idPost);
+            require('./view/backend/confirm_delete.php');
+        }
+    }
+
     public function deletePost($idPost) {
         if (isset($idPost) && $idPost > 0) {
             $this->postDAO->supprPost($idPost);

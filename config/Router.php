@@ -78,6 +78,10 @@ class Router {
                         $this->backController->infoPost($idPost);
                     break;
 
+                    case 'confirmDelete':
+                        $this->backController->confirmDelete($idPost);
+                    break;
+
                     case 'deletePost':
                         $this->backController->deletePost($idPost);
                     break;

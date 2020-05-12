@@ -294,11 +294,11 @@ body {
     border-radius: 10px;
 }
 
-#modify_button {
+.modify_button {
     background-color: #147BEB;
 }
 
-#delete_button {
+.delete_button {
     background-color: #EB352D;
 }
 
@@ -399,4 +399,29 @@ body {
 .options_comments a {
     margin-left: 40px;
     color: #323540;
+}
+
+.title_confirm {
+    font-size: 1.6em;
+    text-align: center;
+}
+
+.confirm_container {
+    height: 300px;
+    width: 100%;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.confirm_buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 40px;
+    width: 50%;
+}
+
+.cancel_button {
+    background-color: #7D7D7D;
 }
