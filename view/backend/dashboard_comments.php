@@ -14,8 +14,7 @@
                         </div>                        
                         <p>'.$comment->comment.'</p>
                         <div class="options_comments">
-                            <a href="" class="element_options"><i class="far fa-eye"></i> Afficher</a>
-                            <a href="" class="element_options"><i class="far fa-bell"></i> Signaler</a>
+                            <a href="./index.php?action=infoComment&idComment='.$comment->id.'" class="element_options"><i class="far fa-eye"></i> Afficher</a>                            
                             <a href="" class="element_options"><i class="fas fa-trash"></i> Supprimer</a>
                         </div>                    
                     </div>';

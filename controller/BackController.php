@@ -14,7 +14,7 @@ class BackController extends Controller {
         }
     }
 
-    public function confirmDelete($idPost) {
+    public function confirmDeletePost($idPost) {
         if (isset($idPost) && $idPost > 0) {
             $onePost = $this->postDAO->getPost($idPost);
             require('./view/backend/confirm_delete_post.php');
@@ -58,6 +58,42 @@ class BackController extends Controller {
     public function reportedComments() {
         $reportedComments = $this->commentDAO->getReportedComments();
         require('./view/backend/reported_comments.php');
+    }
+
+    public function infoComment($idComment) {
+        if (isset($idComment) && $idComment > 0) {
+            $oneComment = $this->commentDAO->getSingleComment($idComment);
+            require('./view/backend/info_comment.php');
+        }
+    }
+
+    public function confirmIgnore($idComment) {
+        if (isset($idComment) && $idComment > 0) {
+            $oneComment = $this->commentDAO->getSingleComment($idComment);
+            require('./view/backend/confirm_ignore.php');
+        }
+    }
+
+    public function ignoreReport($idComment) {
+        if (isset($idComment) && $idComment > 0) {
+            $ignoredReport = $this->commentDAO->ignoreSignal($idComment);
+            require('./view/backend/reported_comments.php');
+        }
+    }
+
+    public function confirmDeleteComment($idComment) {
+        if (isset($idComment) && $idComment > 0) {
+            $oneComment = $this->commentDAO->getSingleComment($idComment);
+            require('./view/backend/confirm_delete_comment.php');
+        }
+    }
+
+    public function deleteComment($idComment) {
+        if (isset($idComment) && $idComment > 0) {
+            $this->commentDAO->supprComment($idComment);
+            $comments = $this->postDAO->getPosts();
+            require('./view/backend/dashboard_posts.php');
+        }
     }
 
     public function loginPage() {

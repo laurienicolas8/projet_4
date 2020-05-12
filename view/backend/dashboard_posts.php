@@ -17,7 +17,7 @@
                         <div class="options">
                             <a href="./index.php?action=infoPost&id='.$post->id.'&idPost='.$post->id.'" class="element_options"><i class="far fa-eye"></i> Afficher</a>
                             <a href="./index.php?action=accessModifPost&idPost='.$post->id.'" class="element_options"><i class="fas fa-pen"></i> Modifier</a>
-                            <a href="./index.php?action=confirmDelete&idPost='.$post->id.'" class="element_options"><i class="fas fa-trash"></i> Supprimer</a>
+                            <a href="./index.php?action=confirmDeletePost&idPost='.$post->id.'" class="element_options"><i class="fas fa-trash"></i> Supprimer</a>
                         </div>
                     </div>';
             }

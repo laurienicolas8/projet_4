@@ -22,6 +22,7 @@ class Router {
         $action = $this->request->reqGet()->getParam('action');
         $id = $this->request->reqGet()->getParam('id');
         $idPost = $this->request->reqGet()->getParam('idPost');
+        $idComment = $this->request->reqGet()->getParam('idComment');
         $author = $this->request->reqPost()->getParam('author');
         $comment = $this->request->reqPost()->getParam('comment');
         $password = $this->request->reqPost()->getParam('password');
@@ -78,8 +79,8 @@ class Router {
                         $this->backController->infoPost($idPost);
                     break;
 
-                    case 'confirmDelete':
-                        $this->backController->confirmDelete($idPost);
+                    case 'confirmDeletePost':
+                        $this->backController->confirmDeletePost($idPost);
                     break;
 
                     case 'deletePost':
@@ -108,6 +109,26 @@ class Router {
 
                     case 'reportedComments':
                         $this->backController->reportedComments();
+                    break;
+
+                    case 'infoComment':
+                        $this->backController->infoComment($idComment);
+                    break;
+
+                    case 'confirmIgnore':
+                        $this->backController->confirmIgnore($idComment);
+                    break;
+
+                    case 'ignoreReport':
+                        $this->backController->ignoreReport($idComment);
+                    break;
+
+                    case 'confirmDeleteComment':
+                        $this->backController->confirmDeleteComment($idComment);
+                    break;
+
+                    case 'deleteComment':
+                        $this->backController->deleteComment($idComment);
                     break;
                 }
             }

@@ -9,7 +9,7 @@
 
                 <?php while ($post = $onePost->fetch()) { 
                 echo '<a href="./index.php?action=accessModifPost&idPost='.$post->id.'" class="modify_button option_button"><i class="fas fa-pen"></i> Modifier ce chapitre</a>
-                <a href="./index.php?action=confirmDelete&idPost='.$post->id.'" class="delete_button option_button"><i class="fas fa-trash"></i> Supprimer ce chapitre</a>';
+                <a href="./index.php?action=confirmDeletePost&idPost='.$post->id.'" class="delete_button option_button"><i class="fas fa-trash"></i> Supprimer ce chapitre</a>';
                 ?>
             </div>
             

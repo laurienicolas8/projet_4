@@ -7,6 +7,11 @@ class CommentDAO extends DAO {
         return $this->createQuery($req, [$idPost]);
     }
 
+    public function getSingleComment($idComment) {
+        $req = 'SELECT id, author, comment, idPost, DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS creationDate FROM comment WHERE id=?';
+        return $this->createQuery($req, [$idComment]);
+    }
+
     public function getAllComments() {
         $req = 'SELECT id, author, comment, idPost, DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS creationDate FROM comment ORDER BY creationDate DESC';
         return $this->createQuery($req);
@@ -25,5 +30,16 @@ class CommentDAO extends DAO {
     public function signalComment($idComment) {
         $req = 'UPDATE comment SET report=true, reportMessage="Commentaire signalé" WHERE id=?';
         return $this->createQuery($req, [$idComment]);
+    }
+
+    public function ignoreSignal($idComment) {
+        $req = 'UPDATE comment SET report=false, reportMessage="Signaler ce commentaire" WHERE id=?';
+        return $this->createQuery($req, [$idComment]);
+    }
+
+    public function supprComment($idComment) {
+        $req = $this->checkConnection()->prepare('DELETE FROM comment WHERE id = ?');
+        $req->execute([$idComment]);
+        return $req;
     }
 }
