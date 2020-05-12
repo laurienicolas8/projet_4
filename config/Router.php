@@ -93,6 +93,14 @@ class Router {
                     case 'addPost':
                         $this->backController->addPost($numPost, $titlePost, $excerptPost, $contentPost);
                     break;
+
+                    case 'accessModifPost':
+                        $this->backController->accessModifPost($idPost);
+                    break;
+
+                    case 'modifPost':
+                        $this->backController->modifPost($idPost, $numPost, $titlePost, $excerptPost, $contentPost);
+                    break;
                     
                     case 'dashboardComments':
                        $this->backController->dashboardComments();

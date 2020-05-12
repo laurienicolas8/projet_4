@@ -17,7 +17,7 @@ class BackController extends Controller {
     public function confirmDelete($idPost) {
         if (isset($idPost) && $idPost > 0) {
             $onePost = $this->postDAO->getPost($idPost);
-            require('./view/backend/confirm_delete.php');
+            require('./view/backend/confirm_delete_post.php');
         }
     }
 
@@ -36,6 +36,18 @@ class BackController extends Controller {
     public function addPost($num, $title, $excerpt, $content) {
         $this->postDAO->createPost($num, $title, $excerpt, $content);
         require('./view/backend/added_post.php');
+    }
+
+    public function accessModifPost($idPost) {
+        if (isset($idPost) && $idPost > 0) {
+            $onePost = $this->postDAO->getPost($idPost);
+            require('./view/backend/modif_post.php');
+        }
+    }
+
+    public function modifPost($idPost, $num, $title, $excerpt, $content) {
+        $this->postDAO->updatePost($idPost, $num, $title, $excerpt, $content);
+        require('./view/backend/modif_done.php');
     }
 
     public function dashboardComments() {

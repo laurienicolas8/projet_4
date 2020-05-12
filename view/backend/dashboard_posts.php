@@ -16,7 +16,7 @@
                         <h4><a class="title" href="./index.php?action=infoPost&idPost='.$post->id.'">Chapitre '.$post->num.' : '.$post->title.'</a></h4>
                         <div class="options">
                             <a href="./index.php?action=infoPost&id='.$post->id.'&idPost='.$post->id.'" class="element_options"><i class="far fa-eye"></i> Afficher</a>
-                            <a href="" class="element_options"><i class="fas fa-pen"></i> Modifier</a>
+                            <a href="./index.php?action=accessModifPost&idPost='.$post->id.'" class="element_options"><i class="fas fa-pen"></i> Modifier</a>
                             <a href="./index.php?action=confirmDelete&idPost='.$post->id.'" class="element_options"><i class="fas fa-trash"></i> Supprimer</a>
                         </div>
                     </div>';
