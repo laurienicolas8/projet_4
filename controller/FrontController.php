@@ -17,7 +17,7 @@ class FrontController extends Controller {
     }
 
     public function reportComment($idComment) {
-        if (isset($id) && $id > 0) {
+        if (isset($idComment) && $idComment > 0) {
             $newReport = $this->commentDAO->signalComment($idComment);
         }
     }

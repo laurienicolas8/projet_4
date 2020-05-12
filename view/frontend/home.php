@@ -17,9 +17,9 @@
     </div>
 </section>
 
-<section id="services" class="section-bg">
+<section id="services" class="section-home">
     <div class="container">
-        <header class="section-header">
+        <header class="home-header">
             <h3>Commencer l'aventure</h3>
         </header>
 

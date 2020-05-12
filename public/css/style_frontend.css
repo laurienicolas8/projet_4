@@ -518,6 +518,11 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 10px;
 }
 
+#date_comment {
+  font-size: 0.8em;
+  font-style: italic;
+}
+
 #comment {
   width: 100%;
   height: 150px;
@@ -538,7 +543,21 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   font-weight: 500;
   position: relative;
-  margin-top: 50px;
+  margin-top: 115px;
+}
+
+.home-header h3 {
+  font-size: 36px;
+  color: #283d50;
+  text-align: center;
+  font-weight: 500;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.section-home {
+  background: #EDEDED;
 }
 
 .section-header p {
@@ -563,7 +582,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .section-bg h3 {
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 
 /* Services Section

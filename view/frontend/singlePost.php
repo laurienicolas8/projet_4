@@ -35,7 +35,7 @@
                             
                             <div class="pseudo_container">
                                 <i class="fas fa-user-circle fa-2x"></i>
-                                <p class="pseudo">'.$comment->author.'</p></div>
+                                <p class="pseudo">'.$comment->author.' <br> <span id="date_comment"> posté le '.$comment->creationDate.'</span></p></div>
                                 <p class="comment_content">'.$comment->comment.'</p>
                             </div>';
                 }?>

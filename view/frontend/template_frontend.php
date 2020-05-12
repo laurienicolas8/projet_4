@@ -50,9 +50,9 @@
       <?php echo $content ?>
 
       <!-- FOOTER -->
-      <section id="testimonials" class="section-bg">
+      <section id="testimonials" class="section-home">
             <div class="container">
-                  <header class="section-header">
+                  <header class="home-header">
                         <h3>A propos de moi</h3>
                   </header>
 

@@ -8,12 +8,12 @@ class CommentDAO extends DAO {
     }
 
     public function getAllComments() {
-        $req = 'SELECT id, author, comment, idPost, DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS creationDate FROM comment';
+        $req = 'SELECT id, author, comment, idPost, DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS creationDate FROM comment ORDER BY creationDate DESC';
         return $this->createQuery($req);
     }
 
     public function getReportedComments() {
-        $req = 'SELECT id, author, comment, idPost, report DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS creationDate FROM comment WHERE report = "true"';
+        $req = 'SELECT id, author, comment, idPost, report, DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS creationDate FROM comment WHERE report =true ORDER BY creationDate DESC';
         return $this->createQuery($req);
     }
 
