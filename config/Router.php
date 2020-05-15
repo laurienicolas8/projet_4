@@ -7,11 +7,8 @@ class Router {
 
     public function __construct() {
         //session_start();
-        //require('./config/Autoloader.php');
-        //Autoloader::register();
-        require('./DAO/DAO.php');
-        require('./DAO/PostDAO.php');
-        require('./DAO/CommentDAO.php');
+        require('./config/Autoloader.php');
+        Autoloader::register();        
         require('./controller/Controller.php');
         require('./controller/FrontController.php');
         require('./controller/BackController.php');
@@ -22,15 +19,14 @@ class Router {
         $this->request = new Request;
     }
 
-    public function run() {
-        
-        $action = $this->request->reqGet()->getParam('action');
-        $id = $this->request->reqGet()->getParam('id');
-        $idPost = $this->request->reqGet()->getParam('idPost');
+    public function run() {        
+        $action = $this->request->reqGet()->getParam('action'); // $action = $_GET['action']
+        $id = $this->request->reqGet()->getParam('id'); // $id = $_GET['id']
+        $idPost = $this->request->reqGet()->getParam('idPost'); // ...
         $idComment = $this->request->reqGet()->getParam('idComment');
-        $author = $this->request->reqPost()->getParam('author');
-        $comment = $this->request->reqPost()->getParam('comment');
-        $password = $this->request->reqPost()->getParam('password');
+        $author = $this->request->reqPost()->getParam('author'); // $author = $_POST['author']
+        $comment = $this->request->reqPost()->getParam('comment'); // $comment = $_POST['comment']
+        $password = $this->request->reqPost()->getParam('password'); // ...
         $numPost = $this->request->reqPost()->getParam('num');
         $titlePost = $this->request->reqPost()->getParam('title');
         $excerptPost = $this->request->reqPost()->getParam('excerpt');
