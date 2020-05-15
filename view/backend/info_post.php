@@ -1,8 +1,8 @@
 <?php ob_start();?>
 
 <div class='row col-lg-12'>
-    <div class='main col-lg-12'>
-        <div class='info_container col-lg-10'>
+    <div class='main col-lg-9'>
+        <div class='info_container col-lg-12'>
             <a href='./index.php?action=dashboardPosts' class='go_back'><i class="fas fa-arrow-left fa-2x"></i></a>
             
             <div class='button_container'>
@@ -30,12 +30,12 @@
 
             <div class='infos_and_labels'>
                 <p class='label'>Extrait visible :</p>
-                <p class='info'><?= $post->excerpt ?></p>
+                <?=$post->excerpt?>
             </div>
 
             <div class='infos_and_labels'>
                 <p class='label'>Contenu :</p>
-                <p class='info'><?= $post->content ?></p>
+                <?=$post->content?>
             </div>
         </div>
         

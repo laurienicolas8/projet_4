@@ -24,7 +24,7 @@
 
             <div class='infos_and_labels'>
                 <p class='label'>Posté le :</p>
-                <p class='info'><?= $comment->creationDate ?></p>
+                <p class='info'><?= $comment->date_comment ?></p>
             </div>
 
             <div class='infos_and_labels'>

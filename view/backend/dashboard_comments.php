@@ -10,12 +10,12 @@
                 echo '<div class="admin_comments col-lg-11">
                         <div class="header_comment">
                             <i class="far fa-comment fa-2x"></i>
-                            <p><span class="author_comment">'.$comment->author.'</span>, posté le '.$comment->date_comment.'</p>
+                            <p><span class="author_comment">'.$comment->author.'</span>, <br>posté le '.$comment->date_comment.' sur le chapitre <em>'.$comment->title.'</em></p> 
                         </div>                        
                         <p>'.$comment->comment.'</p>
                         <div class="options_comments">
                             <a href="./index.php?action=infoComment&idComment='.$comment->id.'" class="element_options"><i class="far fa-eye"></i> Afficher</a>                            
-                            <a href="" class="element_options"><i class="fas fa-trash"></i> Supprimer</a>
+                            <a href="./index.php?action=confirmDeleteComment&idComment='.$comment->id.'" class="element_options"><i class="fas fa-trash"></i> Supprimer</a>
                         </div>                    
                     </div>';
             }

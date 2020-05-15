@@ -19,16 +19,16 @@
 
                 <div class='infos_and_labels'>
                     <label for='excerpt' class='label'>Extrait visible <span class='asterisque'>*</span> :</label>
-                    <textarea form='edit_form' required name='excerpt' class='info_edit excerptPost'></textarea>
+                    <textarea form='edit_form' name='excerpt' class='info_edit excerptPost'></textarea>
                 </div>
 
                 <div class='infos_and_labels'>
                     <label for='content' class='label'>Contenu <span class='asterisque'>*</span> :</label>
-                    <textarea form='edit_form' required name='content' class='info_edit contentPost'></textarea>
+                    <textarea form='edit_form' name='content' class='info_edit contentPost'></textarea>
                     <script>
                         tinymce.init({
                         selector: 'textarea',
-                        mode: 'exact',
+                        mode: 'exact',                       
                         });
                     </script>
                 </div>

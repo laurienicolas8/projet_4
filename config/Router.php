@@ -34,8 +34,7 @@ class Router {
         $numPost = $this->request->reqPost()->getParam('num');
         $titlePost = $this->request->reqPost()->getParam('title');
         $excerptPost = $this->request->reqPost()->getParam('excerpt');
-        $contentPost = $this->request->reqPost()->getParam('content');
-        //$session = $this->request->reqSession()->get('admin');
+        $contentPost = $this->request->reqPost()->getParam('content');        
 
         try {
             if (isset($action)) {

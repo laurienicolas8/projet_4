@@ -77,6 +77,7 @@ class BackController extends Controller {
     public function ignoreReport($idComment) {
         if (isset($idComment) && $idComment > 0) {
             $ignoredReport = $this->commentDAO->ignoreSignal($idComment);
+            $reportedComments = $this->commentDAO->getReportedComments();
             require('./view/backend/reported_comments.php');
         }
     }
@@ -91,7 +92,7 @@ class BackController extends Controller {
     public function deleteComment($idComment) {
         if (isset($idComment) && $idComment > 0) {
             $this->commentDAO->supprComment($idComment);
-            $comments = $this->commentDAO->getComments();
+            $comments = $this->commentDAO->getAllComments();
             require('./view/backend/dashboard_comments.php');
         }
     }

@@ -260,7 +260,7 @@ body {
 }
 
 .info {
-    width: 70%;
+    width: 60%;
     padding: 15px;
     border: 1px solid grey;
     border-radius: 5px;
@@ -271,6 +271,14 @@ body {
     display: flex;
     align-items: flex-start;
     margin: 40px 10px;
+}
+
+.label ~ p {
+    width: 70%;
+    padding: 15px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: white;
 }
 
 .button_container {
@@ -389,6 +397,10 @@ body {
 .author_comment {
     font-weight: 600;
     font-size: 1.2em;
+}
+
+.detail_comment {
+    font-size: 0.9em;
 }
 
 .options_comments {

@@ -14,7 +14,7 @@ class CommentDAO extends DAO {
     // SELECT comment.*, post.title FROM `comment` INNER JOIN post ON comment.idPost=post.id
 
     public function getAllComments() {
-        $req = 'SELECT id, author, comment, idPost, DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS date_comment FROM comment ORDER BY creationDate DESC';
+        $req = 'SELECT comment.id, comment.author, comment.comment, comment.idPost, DATE_FORMAT(comment.creationDate, \'%d/%m/%Y\') AS date_comment, post.title FROM comment INNER JOIN post ON comment.idPost=post.id ORDER BY comment.creationDate DESC';
         return $this->createQuery($req);
     }
 
