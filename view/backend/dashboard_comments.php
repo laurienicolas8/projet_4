@@ -10,7 +10,7 @@
                 echo '<div class="admin_comments col-lg-11">
                         <div class="header_comment">
                             <i class="far fa-comment fa-2x"></i>
-                            <p><span class="author_comment">'.$comment->author.'</span>, posté le '.$comment->creationDate.'</p>
+                            <p><span class="author_comment">'.$comment->author.'</span>, posté le '.$comment->date_comment.'</p>
                         </div>                        
                         <p>'.$comment->comment.'</p>
                         <div class="options_comments">

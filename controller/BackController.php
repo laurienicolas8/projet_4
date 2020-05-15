@@ -101,8 +101,7 @@ class BackController extends Controller {
     }
 
     public function accessDashboard($password) {
-        if (isset($password) && $password == 'ck87fe1S') {
-            session_start();
+        if (isset($password) && $password == 'ck87fe1S') {            
             $posts = $this->postDAO->getPosts();
             require('./view/backend/dashboard_posts.php');
         }

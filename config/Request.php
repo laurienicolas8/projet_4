@@ -3,14 +3,14 @@
 class Request {
     private $get;
     private $post;
-    //private $session;
+    private $session;
 
     public function __construct() {
         require('ReqParameter.php');
-        //require('Session.php');
+        require('Session.php');
         $this->get = new ReqParameter($_GET);
         $this->post = new ReqParameter($_POST);
-        //$this->session = new Session($_SESSION);
+        $this->session = new Session($_SESSION);
     }
 
     public function reqGet() {
@@ -21,7 +21,7 @@ class Request {
         return $this->post;
     }
 
-    /*public function reqSession() {
+    public function reqSession() {
         return $this->session;
-    }*/
+    }
 }

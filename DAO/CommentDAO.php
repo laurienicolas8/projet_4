@@ -3,22 +3,23 @@
 class CommentDAO extends DAO {
     
     public function getComments($idPost) {
-        $req = 'SELECT id, author, comment, idPost, reportMessage, DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS creationDate FROM comment WHERE idPost = ?';
+        $req = 'SELECT id, author, comment, idPost, reportMessage, DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS date_comment FROM comment WHERE idPost = ?';
         return $this->createQuery($req, [$idPost]);
     }
 
     public function getSingleComment($idComment) {
-        $req = 'SELECT id, author, comment, idPost, DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS creationDate FROM comment WHERE id=?';
+        $req = 'SELECT id, author, comment, idPost, DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS date_comment FROM comment WHERE id=?';
         return $this->createQuery($req, [$idComment]);
     }
+    // SELECT comment.*, post.title FROM `comment` INNER JOIN post ON comment.idPost=post.id
 
     public function getAllComments() {
-        $req = 'SELECT id, author, comment, idPost, DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS creationDate FROM comment ORDER BY creationDate DESC';
+        $req = 'SELECT id, author, comment, idPost, DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS date_comment FROM comment ORDER BY creationDate DESC';
         return $this->createQuery($req);
     }
 
     public function getReportedComments() {
-        $req = 'SELECT id, author, comment, idPost, report, DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS creationDate FROM comment WHERE report =true ORDER BY creationDate DESC';
+        $req = 'SELECT id, author, comment, idPost, report, DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS date_comment FROM comment WHERE report =true ORDER BY creationDate DESC';
         return $this->createQuery($req);
     }
 

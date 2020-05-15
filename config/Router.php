@@ -6,8 +6,12 @@ class Router {
     private $request;
 
     public function __construct() {
-        require('./config/Autoloader.php');
-        Autoloader::register();
+        session_start();
+        //require('./config/Autoloader.php');
+        //Autoloader::register();
+        require('./DAO/DAO.php');
+        require('./DAO/PostDAO.php');
+        require('./DAO/CommentDAO.php');
         require('./controller/Controller.php');
         require('./controller/FrontController.php');
         require('./controller/BackController.php');
@@ -19,6 +23,7 @@ class Router {
     }
 
     public function run() {
+        
         $action = $this->request->reqGet()->getParam('action');
         $id = $this->request->reqGet()->getParam('id');
         $idPost = $this->request->reqGet()->getParam('idPost');
@@ -30,7 +35,7 @@ class Router {
         $titlePost = $this->request->reqPost()->getParam('title');
         $excerptPost = $this->request->reqPost()->getParam('excerpt');
         $contentPost = $this->request->reqPost()->getParam('content');
-        //$session = $this->request->reqSession()->get('admin');
+        $session = $this->request->reqSession()->get('admin');
 
         try {
             if (isset($action)) {
