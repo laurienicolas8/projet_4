@@ -91,8 +91,8 @@ class BackController extends Controller {
     public function deleteComment($idComment) {
         if (isset($idComment) && $idComment > 0) {
             $this->commentDAO->supprComment($idComment);
-            $comments = $this->postDAO->getPosts();
-            require('./view/backend/dashboard_posts.php');
+            $comments = $this->commentDAO->getComments();
+            require('./view/backend/dashboard_comments.php');
         }
     }
 

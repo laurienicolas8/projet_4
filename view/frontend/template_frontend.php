@@ -29,72 +29,72 @@
 
       <body>
 
-      <!-- HEADER -->
-      <header id="header" class="fixed-top">
-            <div class="container">
-                  <div class="logo float-left">
-                        <h1 class="text-light"><a href="#header"><span>Jean Forteroche</span></a></h1>
-                  </div>
-
-                  <nav class="main-nav float-right d-none d-lg-block">
-                        <ul>
-                        <li class="active"><a href="./index.php">Accueil</a></li>
-                        <li><a href="./index.php?action=allPosts">Chapitres</a></li>
-                        <li><a class='admin_button' href="./index.php?action=loginPage">Connexion administrateur</a></li>
-                        </ul>
-                  </nav>
-            </div>
-      </header>
-
-      <!-- BODY -->
-      <?php echo $content ?>
-
-      <!-- FOOTER -->
-      <section id="testimonials" class="section-home">
-            <div class="container">
-                  <header class="home-header">
-                        <h3>A propos de moi</h3>
-                  </header>
-
-                  <div class="row justify-content-center">
-                        <div class="col-lg-8">
-                        <div class="testimonial-item">
-                              <img src="./public/images/testimonial-3.jpg" class="testimonial-img" alt="Photo de l'auteur"/>
-                              <h3>Jean Forteroche</h3>
-                              <h4>Ecrivain</h4>
-                              <p>"J'écris des romans depuis maintenant plus de 35 ans. J'ai décidé de créer un blog pour avoir plus facilement les retours de mes lecteurs, j'aimerais savoir ce qu'ils pensent de mes histoires. J'espère qu'ils savoureront ce web-bouquin comme un vrai !"</p>
+            <!-- HEADER -->
+            <header id="header" class="fixed-top">
+                  <div class="container">
+                        <div class="logo float-left">
+                              <h1 class="text-light"><a href="#header"><span>Jean Forteroche</span></a></h1>
                         </div>
+
+                        <nav class="main-nav float-right d-none d-lg-block">
+                              <ul>
+                                    <li class="active"><a href="./index.php">Accueil</a></li>
+                                    <li><a href="./index.php?action=allPosts">Chapitres</a></li>
+                                    <li><a class='admin_button' href="./index.php?action=loginPage">Connexion administrateur</a></li>
+                              </ul>
+                        </nav>
+                  </div>
+            </header>
+
+            <!-- BODY -->
+            <?php echo $content ?>
+
+            <!-- FOOTER -->
+            <section id="testimonials" class="section-home">
+                  <div class="container">
+                        <header class="home-header">
+                              <h3>A propos de moi</h3>
+                        </header>
+
+                        <div class="row justify-content-center">
+                              <div class="col-lg-8">
+                              <div class="testimonial-item">
+                                    <img src="./public/images/testimonial-3.jpg" class="testimonial-img" alt="Photo de l'auteur"/>
+                                    <h3>Jean Forteroche</h3>
+                                    <h4>Ecrivain</h4>
+                                    <p>"J'écris des romans depuis maintenant plus de 35 ans. J'ai décidé de créer un blog pour avoir plus facilement les retours de mes lecteurs, j'aimerais savoir ce qu'ils pensent de mes histoires. J'espère qu'ils savoureront ce web-bouquin comme un vrai !"</p>
+                              </div>
+                              </div>
                         </div>
                   </div>
-            </div>
             </section>
 
             <footer id="footer">
-            <div class="footer-top">
-                  <div class="container">
-                        <div class="row footer">
-                              <div class="col-lg-4 col-md-6 footer-info">
-                                    <h3>Jean Forteroche</h3>
-                                    <p>Auteur de "La Longue Nuit" et "Arme au poing", Jean Forteroche partage aujourd'hui son nouveau roman "Billet simple pour l'Alaska" déjà best-seller en France. </p>
-                              </div>
+                  <div class="footer-top">
+                        <div class="container">
+                              <div class="row footer">
+                                    <div class="col-lg-4 col-md-6 footer-info">
+                                          <h3>Jean Forteroche</h3>
+                                          <p>Auteur de "La Longue Nuit" et "Arme au poing", Jean Forteroche partage aujourd'hui son nouveau roman "Billet simple pour l'Alaska" déjà best-seller en France. </p>
+                                    </div>
 
-                              <div class="col-lg-3 col-md-6 footer-contact">
-                                    <h4>Me contacter</h4>
-                                    <p>A108 Adam Street <br>
-                                    New York, NY 535022<br>
-                                    United States <br>
-                                    <strong>Téléphone:</strong> 06.48.36.25.48<br>
-                                    <strong>Email:</strong> info@example.com<br></p>
+                                    <div class="col-lg-3 col-md-6 footer-contact">
+                                          <h4>Me contacter</h4>
+                                          <p>A108 Adam Street <br>
+                                          New York, NY 535022<br>
+                                          United States <br>
+                                          <strong>Téléphone:</strong> 06.48.36.25.48<br>
+                                          <strong>Email:</strong> info@example.com<br></p>
 
-                                    <div class="social-links">
-                                          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                          <div class="social-links">
+                                                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                                                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                                                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                          </div>
                                     </div>
                               </div>
                         </div>
                   </div>
-            </div>
             </footer>
 
             <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
@@ -115,5 +115,5 @@
             <!-- Template Main JS File -->
             <script src="assets/js/main.js"></script>
 
-    </body>
+      </body>
 </html>

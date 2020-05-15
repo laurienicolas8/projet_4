@@ -10,7 +10,7 @@ class Request {
         require('Session.php');
         $this->get = new ReqParameter($_GET);
         $this->post = new ReqParameter($_POST);
-        $this->session = new Session($_SESSION);
+        //$this->session = new Session($_SESSION);
     }
 
     public function reqGet() {

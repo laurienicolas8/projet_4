@@ -10,13 +10,13 @@
                 echo '<div class="admin_comments col-lg-11">
                         <div class="header_comment">
                             <i class="far fa-comment fa-2x" style="color: #DB001A;"></i>
-                            <p><span class="author_comment">'.$comment->author.'</span>, posté le '.$comment->creationDate.'</p>
+                            <p><span class="author_comment">'.$comment->author.'</span>, posté le '.$comment->date_comment.'</p>
                         </div>                        
                         <p>'.$comment->comment.'</p>
                         <div class="options_comments">
-                            <a href="" class="element_options"><i class="far fa-eye"></i> Afficher</a>
-                            <a href="" class="element_options"><i class="fas fa-eye-slash"></i> Ignorer</a>
-                            <a href="" class="element_options"><i class="fas fa-trash"></i> Supprimer</a>
+                            <a href="./index.php?action=infoComment&idComment='.$comment->id.'" class="element_options"><i class="far fa-eye"></i> Afficher</a>
+                            <a href="./index.php?action=confirmIgnore&idComment='.$comment->id.'" class="element_options"><i class="fas fa-eye-slash"></i> Ignorer</a>
+                            <a href="./index.php?action=confirmDeleteComment&idComment='.$comment->id.'" class="element_options"><i class="fas fa-trash"></i> Supprimer</a>
                         </div>                    
                     </div>';
             }

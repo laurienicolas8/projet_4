@@ -6,7 +6,7 @@ class Router {
     private $request;
 
     public function __construct() {
-        session_start();
+        //session_start();
         //require('./config/Autoloader.php');
         //Autoloader::register();
         require('./DAO/DAO.php');
@@ -35,7 +35,7 @@ class Router {
         $titlePost = $this->request->reqPost()->getParam('title');
         $excerptPost = $this->request->reqPost()->getParam('excerpt');
         $contentPost = $this->request->reqPost()->getParam('content');
-        $session = $this->request->reqSession()->get('admin');
+        //$session = $this->request->reqSession()->get('admin');
 
         try {
             if (isset($action)) {
@@ -45,7 +45,7 @@ class Router {
                     break;
 
                     case 'singlePost':
-                        $this->frontController->singlePost($id);
+                        $this->frontController->singlePost($idPost);
                     break;
 
                     case 'addComment':

@@ -29,24 +29,23 @@
                 </form>
                 <?php
                 }
-                while ($comment = $comments->fetch()){
+                foreach ($comments->fetchAll(PDO::FETCH_CLASS) as $comment) {
                     echo '<div class="comment">
                             <a href="./index.php?action=reportComment&id='.$comment->id.'&idPost='.$comment->idPost.'" class="report_comment">'.$comment->reportMessage.'</a>
                             
                             <div class="pseudo_container">
                                 <i class="fas fa-user-circle fa-2x"></i>
-                                <p class="pseudo">'.$comment->author.' <br> <span id="date_comment"> posté le '.$comment->creationDate.'</span></p></div>
+                                <p class="pseudo">'.$comment->author.' <br> <span id="date_comment"> posté le '.$comment->date_comment.'</span></p></div>
                                 <p class="comment_content">'.$comment->comment.'</p>
                             </div>';
-                }?>
+                }
+                ?>
             </div>
         </div>
     </div>
 </section>  
-<script type='text/JavaScript' src='./js/jquery-3.4.1.min.js'></script>
 
-
-<?php
+<?php 
 $content = ob_get_clean();
 require('template_frontend.php');
 ?>
