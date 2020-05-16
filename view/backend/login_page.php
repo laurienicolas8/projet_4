@@ -27,13 +27,6 @@
     </head>
 
     <body>
-
-        <header>
-            <p class='hello'>Bonjour, Jean</p>
-            <h1><i class="fas fa-book-open fa-2x"></i></h1>
-            <a class='back_to_blog' href='./index.php'>Retour au blog</a>
-        </header>
-
         <form action='./index.php?action=accessDashboard' method='post' class='form_login'>
             <h1 class='h1_login'>Connectez-vous</h1>
             <label class='label_login'>Mot de passe :</label><input name='password' type='text'> 

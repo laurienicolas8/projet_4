@@ -30,35 +30,31 @@
       <body>
 
             <!-- HEADER -->
-            <header id="header" class="fixed-top">
-                  <div class="container">
-                        <div class="logo float-left">
-                              <h1 class="text-light"><a href="#header"><span>Jean Forteroche</span></a></h1>
-                        </div>
-
-                        <nav class="main-nav float-right d-none d-lg-block">
-                              <ul>
-                                    <li class="active"><a href="./index.php">Accueil</a></li>
-                                    <li><a href="./index.php?action=allPosts">Chapitres</a></li>                        
-                              </ul>
-                        </nav>
+            <header id="header" class="fixed-top col-lg-12">                  
+                  <div class="logo float-left">
+                        <h1 class="text-light"><a href="#header"><span>Jean Forteroche</span></a></h1>
                   </div>
+                  
+                  <ul class='menu'>
+                        <li class='element_menu'><a href="./index.php">Accueil</a></li>
+                        <li class='element_menu'><a href="./index.php?action=allPosts">Chapitres</a></li>                        
+                  </ul>       
             </header>
 
             <!-- BODY -->
             <?php echo $content ?>
 
             <!-- FOOTER -->
-            <section id="testimonials" class="section-home">
+            <section id="about_me">
                   <div class="container">
-                        <header class="home-header">
+                        <header class="home_chapters_header">
                               <h3>A propos de moi</h3>
                         </header>
 
                         <div class="row justify-content-center">
                               <div class="col-lg-8">
-                              <div class="testimonial-item">
-                                    <img src="./public/images/testimonial-3.jpg" class="testimonial-img" alt="Photo de l'auteur"/>
+                              <div class="about_me_item">
+                                    <img src="./public/images/testimonial-3.jpg" class="about_me_img" alt="Photo de l'auteur"/>
                                     <h3>Jean Forteroche</h3>
                                     <h4>Ecrivain</h4>
                                     <p>"J'écris des romans depuis maintenant plus de 35 ans. J'ai décidé de créer un blog pour avoir plus facilement les retours de mes lecteurs, j'aimerais savoir ce qu'ils pensent de mes histoires. J'espère qu'ils savoureront ce web-bouquin comme un vrai !"</p>
@@ -98,8 +94,6 @@
                         </div>
                   </div>
             </footer>
-
-            <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
             <!-- Vendor JS Files -->
             <script src="assets/vendor/jquery/jquery.min.js"></script>

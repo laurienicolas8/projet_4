@@ -1,9 +1,9 @@
 <?php ob_start();?>
 
-<section id="services" class="section-bg posts">
+<section id='chapters' class="posts">
     <div class="container">
-        <header class="section-header">
-            <h3 class='posts-head'>Tous les chapitres</h3>
+        <header class="posts_header">
+            <h3>Tous les chapitres</h3>
         </header>
 
         <div class="row col-lg-12">

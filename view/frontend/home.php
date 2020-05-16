@@ -10,15 +10,15 @@
             <h2>"<i> Billet simple pour l'Alaska </i>"<br><br><span>Bonjour à toutes et à tous, et bienvenue sur mon blog. Je partage avec vous mon dernier roman en date, <i>Billet simple pour l'Alaska</i>. Vous le trouverez sous forme de chapitres, d'épisodes et je vous invite à me donner votre avis dans les commentaires ! Enjoy !
             </span><br></h2>
             <div>
-                <a href="#services" class="btn-get-started">Commencer</a>
+                <a href="#chapters" class="btn-get-started">Commencer</a>
             </div>
         </div>
     </div>
 </section>
 
-<section id="services" class="section-home">
+<section id="chapters">
     <div class="container">
-        <header class="home-header">
+        <header class="home_chapters_header">
             <h3>Commencer l'aventure</h3>
         </header>
 

@@ -1,9 +1,9 @@
 <?php ob_start();?>
 
-<section id="services" class="section-bg posts content_container">
+<section id='chapters' class="posts">
     <div class="container">
-        <header class="section-header">
-            <h3> 
+        <header class="posts_header">
+            <h3 class='posts_head'> 
                 <?php 
                 while ($post = $onePost->fetch()) {
                 echo 'Chapitre '.$post->num.' : '.$post->title.''; 
@@ -18,8 +18,9 @@
                 ?> 
             </p>
                 
-            <h3>Espace commentaires</h3>
+            
             <div class="comments_container col-lg-12">
+                <h3>Espace commentaires</h3>
                 <form class='new_comment' method="post" action='./index.php?action=addComment&idPost=<?=$post->id?>'>
                     <label for="author">Pseudo</label><br>
                     <input type="text" id="author" class='input_comment' name="author"><br>
