@@ -39,8 +39,7 @@
                         <nav class="main-nav float-right d-none d-lg-block">
                               <ul>
                                     <li class="active"><a href="./index.php">Accueil</a></li>
-                                    <li><a href="./index.php?action=allPosts">Chapitres</a></li>
-                                    <li><a class='admin_button' href="./index.php?action=loginPage">Connexion administrateur</a></li>
+                                    <li><a href="./index.php?action=allPosts">Chapitres</a></li>                        
                               </ul>
                         </nav>
                   </div>
@@ -73,6 +72,9 @@
                   <div class="footer-top">
                         <div class="container">
                               <div class="row footer">
+                                    <div class='col-lg-4 footer-info'>
+                                          <a class='dashboard_button' href="./index.php?action=loginPage">Accès administrateur</a>
+                                    </div>
                                     <div class="col-lg-4 col-md-6 footer-info">
                                           <h3>Jean Forteroche</h3>
                                           <p>Auteur de "La Longue Nuit" et "Arme au poing", Jean Forteroche partage aujourd'hui son nouveau roman "Billet simple pour l'Alaska" déjà best-seller en France. </p>
@@ -85,13 +87,13 @@
                                           United States <br>
                                           <strong>Téléphone:</strong> 06.48.36.25.48<br>
                                           <strong>Email:</strong> info@example.com<br></p>
-
-                                          <div class="social-links">
-                                                <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
-                                                <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
-                                                <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
-                                          </div>
                                     </div>
+
+                                    <div class="social-links">
+                                          <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+                                          <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+                                          <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+                                    </div>                                    
                               </div>
                         </div>
                   </div>

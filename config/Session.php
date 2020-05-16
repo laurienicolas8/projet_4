@@ -9,7 +9,7 @@ class Session {
     
     /**
      * set
-     * create a session 
+     * create a session variable
      * @param string $name
      * @param string $value
      */
@@ -19,8 +19,8 @@ class Session {
     
     /**
      * get
-     * control that the $_SESSION[$name] exists
-     * return that $_SESSION
+     * control that $_SESSION[$name] exists
+     * return $_SESSION
      * @param string $name
      * @return mixed
      */
@@ -29,7 +29,16 @@ class Session {
             return $_SESSION[$name];
         }
     }
-    
+        
+    /**
+     * remove
+     * delete the session variable according to $name
+     * @param string $name
+     */
+    public function remove($name) {
+        unset($_SESSION[$name]);
+    }
+
     /**
      * stop
      * destroy the session

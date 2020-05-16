@@ -6,7 +6,7 @@ class Router {
     private $request;
 
     public function __construct() {
-        //session_start();
+        session_start();
         require('./config/Autoloader.php');
         Autoloader::register();        
         require('./controller/Controller.php');
@@ -19,7 +19,7 @@ class Router {
         $this->request = new Request;
     }
 
-    public function run() {        
+    public function run() {      
         $action = $this->request->reqGet()->getParam('action'); // $action = $_GET['action']
         $id = $this->request->reqGet()->getParam('id'); // $id = $_GET['id']
         $idPost = $this->request->reqGet()->getParam('idPost'); // ...
@@ -30,7 +30,8 @@ class Router {
         $numPost = $this->request->reqPost()->getParam('num');
         $titlePost = $this->request->reqPost()->getParam('title');
         $excerptPost = $this->request->reqPost()->getParam('excerpt');
-        $contentPost = $this->request->reqPost()->getParam('content');        
+        $contentPost = $this->request->reqPost()->getParam('content');
+        $sessionAdmin = $this->request->reqSession()->get('admin');
 
         try {
             if (isset($action)) {
@@ -59,7 +60,7 @@ class Router {
                     break;
 
                     case 'loginPage':
-                        if (isset($session)) {
+                        if (isset($sessionAdmin)) {
                             $this->backController->dashboardPosts();
                         }
                         else {
@@ -68,7 +69,13 @@ class Router {
                     break;
 
                     case 'accessDashboard':                        
-                        $this->backController->accessDashboard($password);                        
+                        $this->backController->accessDashboard($password);
+                        $this->request->reqSession()->set('admin', 'Jean');                                                           
+                    break;
+
+                    case 'deconnect':
+                        $this->request->reqSession()->remove('admin', 'Jean');
+                        $this->frontController->home();
                     break;
 
                     case 'dashboardPosts':

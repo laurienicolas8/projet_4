@@ -217,7 +217,8 @@ class BackController extends Controller {
      * @param string $password
      */
     public function accessDashboard($password) {
-        if (isset($password) && $password == 'ck87fe1S') {            
+        if (isset($password) && $password == 'ck87fe1S') {  
+              
             $posts = $this->postDAO->getPosts();
             require('./view/backend/dashboard_posts.php');
         }
