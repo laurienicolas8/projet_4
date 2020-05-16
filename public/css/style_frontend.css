@@ -24,7 +24,7 @@ a:hover, a:active, a:focus {
 
 p {
   padding: 0;
-  margin: 0 0 30px 0;
+  margin: 0 0 20px 30px;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -643,7 +643,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 24px;
   margin-bottom: 0;
 }
-
 
 
 .all_chapters {

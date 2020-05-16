@@ -2,7 +2,7 @@
 
 <div class='row col-lg-12'>
     <div class='main col-lg-12'>
-        <div class='elements_container col-lg-10'>
+        <div class='elements_container col-lg-10'>            
             <h1 class='all_h1'>Commentaires signalés</h1>
 
             <?php

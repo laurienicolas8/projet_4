@@ -31,14 +31,11 @@
 
     <body>
 
-    <header>
-        <p class='hello'>Bonjour, Jean</p>
-        <h1><i class="fas fa-book-open fa-2x"></i></h1>
-        <a class='back_to_blog' href='./index.php?action=deconnect'>Deconnexion</a>
-        <a class='back_to_blog' href='./index.php'>Retour au blog</a>
-    </header>
-
     <div class='menu'>
+        <div>        
+            <a class='back_to_blog deconnect' href='./index.php?action=deconnect'>Deconnexion</a>
+            <a class='back_to_blog' href='./index.php'>Retour au blog</a>
+        </div>
         <ul>
             <li class='first_list_menu'><a href='./index.php?action=dashboardPosts' class='element_menu'>Chapitres</a></li>
             <ul>
