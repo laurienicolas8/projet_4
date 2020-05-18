@@ -1,23 +1,20 @@
 <?php ob_start();?>
 
 <section id="intro" class="clearfix">
-    <div class="container">
-        <div class="intro-img">
-            <img src='./public/images/testimonial-4.png' alt="Fond intro" class="img-fluid"/>
-        </div>
-
         <div class="intro-info">
             <h2>"<i> Billet simple pour l'Alaska </i>"<br><br><span>Bonjour à toutes et à tous, et bienvenue sur mon blog. Je partage avec vous mon dernier roman en date, <i>Billet simple pour l'Alaska</i>. Vous le trouverez sous forme de chapitres, d'épisodes et je vous invite à me donner votre avis dans les commentaires ! Enjoy !
             </span><br></h2>
-            <div>
+            <div class='get-started-div'>
                 <a href="#chapters" class="btn-get-started">Commencer</a>
             </div>
         </div>
-    </div>
+
+        <div class="intro-img">
+            <img src='./public/images/testimonial-4.png' alt="Fond intro" class="img-fluid"/>
+        </div>
 </section>
 
 <section id="chapters">
-    <div class="container">
         <header class="home_chapters_header">
             <h3>Commencer l'aventure</h3>
         </header>
@@ -38,7 +35,6 @@
             ?>
             <a href='./index.php?action=allPosts' class='all_chapters'>Voir tous les chapitres</a>
         </div>
-    </div>
 </section>
 
 <?php 

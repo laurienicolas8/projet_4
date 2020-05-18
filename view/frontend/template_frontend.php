@@ -68,7 +68,7 @@
                   <div class="footer-top">
                         <div class="container">
                               <div class="row footer">
-                                    <div class='col-lg-4 footer-info'>
+                                    <div class='col-lg-4 footer-info btn_admin'>
                                           <a class='dashboard_button' href="./index.php?action=loginPage">Accès administrateur</a>
                                     </div>
                                     <div class="col-lg-4 col-md-6 footer-info">
