@@ -28,6 +28,23 @@ class FrontController extends Controller {
             echo 'Erreur : aucun chapitre n\'a été identifié';
         }
     }
+        
+    /**
+     * confirmReport
+     * control that $idComment exists and is > 0
+     * call the method getSingleComment to get author according to $idComment
+     * call the page requiring confirmation to report the comment
+     * @param int $idComment
+     */
+    public function confirmReport($idComment) {
+        if (isset($idComment) && $idComment > 0) {
+            $oneComment = $this->commentDAO->getSingleComment($idComment);
+            require('./view/frontend/confirm_report.php');
+        }
+        else {
+            echo 'Erreur : aucun commentaire n\'a été identifié';
+        }
+    }
     
     /**
      * reportComment
@@ -38,6 +55,11 @@ class FrontController extends Controller {
     public function reportComment($idComment) {
         if (isset($idComment) && $idComment > 0) {
             $newReport = $this->commentDAO->signalComment($idComment);
+            $oneComment = $this->commentDAO->getSingleComment($idComment);
+            require('./view/frontend/report_done.php');
+        }
+        else {
+            echo 'Erreur : aucun commentaire n\'a été identifié';
         }
     }
 }

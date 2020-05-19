@@ -1,7 +1,7 @@
 <?php ob_start();?>
 
 <div class='row col-lg-12'>
-    <div class='main col-lg-9'>
+    <div class='main col-lg-12'>
         <div class='info_container col-lg-12'>
             <a href='./index.php?action=dashboardPosts' class='go_back'><i class="fas fa-arrow-left fa-2x"></i></a>
             

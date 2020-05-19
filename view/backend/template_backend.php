@@ -31,11 +31,10 @@
 
     <body>
 
+    <div class='menu_hamburger'>
+        <i class="fas fa-bars fa-2x menu_hamburger_icon"></i>
+    </div>
     <div class='menu'>
-        <div>        
-            <a class='back_to_blog deconnect' href='./index.php?action=deconnect'>Deconnexion</a>
-            <a class='back_to_blog' href='./index.php'>Retour au blog</a>
-        </div>
         <ul>
             <li class='first_list_menu'><a href='./index.php?action=dashboardPosts' class='element_menu'>Chapitres</a></li>
             <ul>
@@ -48,9 +47,30 @@
                 <li class='list_menu'><a href='./index.php?action=reportedComments' class='element_submenu'>Commentaires signalés</a></li>
             </ul>
         </ul>
+        <div class='back_to_blog_container'>        
+            <a class='back_to_blog deconnect' href='./index.php?action=deconnect'>Deconnexion</a>
+            <a class='back_to_blog' href='./index.php'>Retour au blog</a>
+        </div>
     </div>
 
     <?php echo $content ?>
+
+    <!-- jQuery -->
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+        let hamburger = $('.menu_hamburger_icon');
+        let sidebar = $('.menu');
+        let main = $('.main');
+        hamburger.on('click', (e) => {
+            if (sidebar.css('display') == 'none') {
+                sidebar.slideToggle();   
+            } else {
+                sidebar.slideToggle();              
+            }
+        })
+    </script>
+
+    
 
     </body>
 </html>

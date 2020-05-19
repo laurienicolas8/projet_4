@@ -4,6 +4,11 @@ body {
     margin: 0;
 }
 
+.row {
+    margin: 0;
+    padding: 0;
+}
+
 
 /*---------- LOGIN PAGE ----------*/
 .form_login {
@@ -50,15 +55,16 @@ body {
 
 /*---------- SIDEBAR MENU ----------*/
 .menu {
-    width: 340px;
+    width: 24%;
     z-index: 1;
     position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    padding-top: 4%;
+    justify-content: space-between;
+    padding-top: 6.5%;
     background-color: #E3E3E6;
     box-shadow: 3px 3px 3px #9C9C9C;
 }
@@ -101,12 +107,11 @@ body {
 }
 
 .menu ul {
-    margin: 0;
     padding-left: 0;
-    padding-right: 15px;
 }
 
 .first_list_menu {
+    width: 95%;
     background-color: rgba(187, 178, 237);
     border-bottom-right-radius: 40px;
     border-top-right-radius: 40px;
@@ -121,17 +126,23 @@ body {
 }
 
 .back_to_blog {
-    position: absolute;
-    top: 90%;
-    left: 4%;
+    width: 45%;
     text-decoration: none;
     color: #323540;
     font-weight: bolder;
     padding: 15px;
     border: 2px solid #323540;
     border-radius: 30px;
-    margin-right: 20px;
+    margin: 0 10px;
     transition: all 400ms;
+    text-align: center;
+}
+
+.back_to_blog_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 3%;
 }
 
 .deconnect {
@@ -148,11 +159,21 @@ body {
 }
 
 
+/*---------- MENU HAMBURGER ----------*/
+.menu_hamburger i {
+    display: none;
+    position: fixed;
+    z-index: 2;
+    padding: 15px;
+    background-color: #323540;
+    color: white;
+}
+
 /*---------- DASHBOARDS ----------*/
 .main {
-    width: 100%;
+    max-width: 76%;
     background-color: #d2d2d4;
-    margin-left: 340px;
+    margin-left: 24%;
     color: #323540;
     padding-top: 20px;
 }
@@ -166,11 +187,10 @@ body {
     display: flex;
     align-items: center;
     text-decoration: none;
-    position: relative;
     margin-bottom: 25px;
     height: 90px;
     border-radius: 8px;
-    width: 90%;
+    width: 100%;
     transition: all 400ms;
 }
 
@@ -178,9 +198,16 @@ body {
     background-color: #d2d2d4;
 }
 
+.book {
+    width: 12%;
+}
+
+.posts_admin h4 {
+    width: 75%;
+}
+
 .title {
     color: #323540;
-    margin-left: 25px;
     transition: all 400ms;
 }
 
@@ -192,14 +219,24 @@ body {
 
 #new_chapter_button {
     display: flex;
+    justify-content: flex-end;
     margin-bottom: 60px;
     overflow: hidden;
     height: 70px;
+    width: 100%;
+}
+
+#new_chapter_button i {
+    position: absolute;
+    left: -2%;
+}
+
+#new_chapter_button h4 {
+    width: 92%;
 }
 
 #new_chapter_title {
     color: #323540;
-    margin-left: 95px;
 }
 
 #new_chapter_title:hover {
@@ -207,15 +244,8 @@ body {
     text-decoration: none;
 }
 
-#new_chapter_button i {
-    position: absolute;
-    left: -15px;
-}
-
 .options {
-    position: absolute;
-    right: 20px;
-    width: 30%;
+    width: 40%;
     display: flex;
     justify-content: space-between;
 }
@@ -264,7 +294,7 @@ body {
 }
 
 .label ~ p {
-    width: 70%;
+    width: 85%;
     padding: 15px;
     border: 1px solid grey;
     border-radius: 5px;
@@ -272,7 +302,7 @@ body {
 }
 
 .button_container {
-    width: 92%;
+    width: 110%;
     display: flex;
     justify-content: space-around;
     margin-bottom: 40px;
@@ -314,15 +344,21 @@ body {
 
 .edit_container {
     position: relative;
+    max-width: 100%;
+}
+
+#edit_form {
+    text-align: center;
 }
 
 .edit_h1 {
     text-align: center;
+    width: 105%;
 }
 
 .all_h1 {
     text-align: center;
-    width: 91%;
+    width: 100%;
     margin-top: -25px;
     margin-bottom: 35px;
 }
@@ -339,7 +375,7 @@ body {
 }
 
 .info_edit.titlePost {
-    width: 15%;
+    width: 35%;
 }
 
 .info_edit.excerptPost {
@@ -362,9 +398,7 @@ body {
 
 .button_editPost {
     background-color: #147BEB;
-    position: absolute;
     margin-bottom: 40px;
-    left: 39%;
 }
 
 .header_comment {
@@ -396,6 +430,14 @@ body {
 .options_comments {
     display: flex;
     justify-content: flex-end;
+}
+
+.options_comments a {
+    align-items: center;
+}
+
+.options_comments i {
+    margin-right: 5px;
 }
 
 .options_comments a {
@@ -448,4 +490,276 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+
+/*---------- RESPONSIVE ----------*/
+@media screen and (max-width: 1290px) {
+    .title {
+        font-size: 0.9em;
+    }
+
+    .options {
+        flex-direction: column;
+        align-items: flex-end;
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 1160px) {
+    .book {
+        width: 12%;
+    }
+    .back_to_blog_container {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .back_to_blog {
+        width: 90%;
+        margin: 10px;
+    }
+    
+    .menu_hamburger i {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+        width: 280px;
+    }
+
+    .main {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    #new_chapter_button h4 {
+        width: 89%;
+    }
+
+    .edit_h1 {
+        font-size: 2.1em;
+    }
+
+    .go_back {
+        left: 80px;
+    }
+
+    .label {
+        width: 27%;
+        font-size: 1.1em;
+    }
+
+    .tox {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 940px) {
+    .menu {
+        padding-top: 8%;
+    }
+
+    .book {
+        width: 16%;
+    }
+
+    #new_chapter_button h4 {
+        width: 87%;
+    }
+
+    .button_container {
+        justify-content: center;
+    }
+
+    .option_button {
+        margin: 20px;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .infos_and_labels {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .label {
+        width: 50%;
+        text-align: center;
+        padding: 0;
+    }
+    .info_edit.numPost {
+        width: 10%;
+    }
+
+    .info_edit.titlePost {
+        width: 80%;
+    }
+
+    .tox {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 675px) {
+    .menu {
+        padding-top: 12%;
+    }
+
+    .book {
+        width: 24%;
+    }
+
+    #new_chapter_button h4 {
+        width: 80%;
+    }
+
+    .title {
+        font-size: 0.8em;
+    }
+    
+    #new_chapter_button i {
+        left: -3%;
+    }
+
+    .edit_h1 {
+        font-size: 1.6em;
+    }
+
+    .go_back {
+        left: 60px;
+    }
+
+    .button_container {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .option_button {
+        margin: 12px auto;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .book {
+        display: none;
+    }
+
+    .title {
+        font-size: 0.7em;
+    }
+
+    #new_chapter_title {
+        font-size: 0.8em;
+    }
+
+    #new_chapter_button i {
+        left: -4%;
+    }
+
+    .menu_hamburger i {
+        padding: 8px;
+    }
+
+    .options {
+        font-size: 0.7em;
+    }
+
+    .go_back {
+        left: -5px;
+        top: 50px;
+    }
+
+    .info_edit.numPost {
+        width: 15%;
+    }
+
+    .info_edit.titlePost {
+        width: 90%;
+    }
+
+    .tox {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .posts_admin {
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    #new_chapter_button {
+        flex-direction: row;
+    }
+
+    .posts_admin h4 {
+        text-align: center;
+        font-size: 1.5em;
+    }
+
+    .options {
+        flex-direction: row;
+        width: 60%;
+    }
+
+    .element_options {
+        display: flex;
+    }
+
+    .option_button {
+        font-size: 0.9em;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    .options {
+        width: 90%;
+    }
+
+    .posts_admin h4 {
+        width: 100%;
+    }
+
+    #new_chapter_title {
+        font-size: 0.6em;
+    }
+
+    #new_chapter_button h4 {
+        width: 70%;
+    }
+
+    #new_chapter_button i {
+        left: -6%;
+    }
+
+    .edit_h1 {
+        font-size: 1.2em;
+    }
+
+    .options_comments {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .options_comments a {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 390px) {
+    #new_chapter_button h4 {
+        width: 65%;
+    }
+
+    .edit_h1 {
+        font-size: 1.1em;
+    }
+
+    .label {
+        width: 100%;
+    }
 }

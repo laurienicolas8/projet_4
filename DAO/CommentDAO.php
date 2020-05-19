@@ -10,7 +10,7 @@ class CommentDAO extends DAO {
      * @return mixed
      */
     public function getComments($idPost) {
-        $req = 'SELECT id, author, comment, idPost, reportMessage, DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS date_comment FROM comment WHERE idPost = ? ORDER BY creationDate DESC';
+        $req = 'SELECT id, author, comment, idPost, report, DATE_FORMAT(creationDate, \'%d/%m/%Y\') AS date_comment FROM comment WHERE report=false AND idPost = ? ORDER BY creationDate DESC';
         return $this->createQuery($req, [$idPost]);
     }
     
@@ -58,7 +58,7 @@ class CommentDAO extends DAO {
      * @return mixed
      */
     public function createComment($idPost, $author, $comment) {
-        $req = 'INSERT INTO comment (idPost, author, comment, creationDate, report, reportMessage) VALUES (?, ?, ?, NOW(), false, "Signaler ce commentaire")';
+        $req = 'INSERT INTO comment (idPost, author, comment, creationDate, report) VALUES (?, ?, ?, NOW(), false)';
         return $this->createQuery($req, [$idPost, $author, $comment]);
     }
     
@@ -71,7 +71,7 @@ class CommentDAO extends DAO {
      * @return mixed
      */
     public function signalComment($idComment) {
-        $req = 'UPDATE comment SET report=true, reportMessage="Commentaire signalé" WHERE id=?';
+        $req = 'UPDATE comment SET report=true WHERE id=?';
         return $this->createQuery($req, [$idComment]);
     }
     
@@ -84,7 +84,7 @@ class CommentDAO extends DAO {
      * @return mixed
      */
     public function ignoreSignal($idComment) {
-        $req = 'UPDATE comment SET report=false, reportMessage="Signaler ce commentaire" WHERE id=?';
+        $req = 'UPDATE comment SET report=false WHERE id=?';
         return $this->createQuery($req, [$idComment]);
     }
     

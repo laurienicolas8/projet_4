@@ -8,7 +8,7 @@ class Router {
     public function __construct() {
         session_start();
         require('./config/Autoloader.php');
-        Autoloader::register();        
+        Autoloader::register();
         require('./controller/Controller.php');
         require('./controller/FrontController.php');
         require('./controller/BackController.php');
@@ -54,9 +54,12 @@ class Router {
                         }                       
                     break;
 
+                    case 'confirmReport':
+                        $this->frontController->confirmReport($idComment);
+                    break;
+
                     case 'reportComment':                        
-                        $this->frontController->reportComment($id);
-                        $this->frontController->singlePost($idPost);                        
+                        $this->frontController->reportComment($idComment);                      
                     break;
 
                     case 'loginPage':
