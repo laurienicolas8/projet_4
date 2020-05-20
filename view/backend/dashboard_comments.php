@@ -2,12 +2,12 @@
 
 <div class='row col-lg-12'>
     <div class='main col-lg-12'>
-        <div class='elements_container col-lg-10'>
+        <div class='elements_container col-lg-12'>
             <h1 class='all_h1'>Tous les commentaires</h1>
 
             <?php
             foreach ($comments->fetchAll(PDO::FETCH_CLASS) as $comment) {
-                echo '<div class="admin_comments col-lg-11">
+                echo '<div class="admin_comments col-lg-12">
                         <div class="header_comment">
                             <i class="far fa-comment fa-2x"></i>
                             <p><span class="author_comment">'.$comment->author.'</span>, <br>posté le '.$comment->date_comment.' sur le chapitre <em>'.$comment->title.'</em></p> 

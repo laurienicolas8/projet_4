@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3308
--- Généré le :  mar. 19 mai 2020 à 13:46
+-- Généré le :  mar. 19 mai 2020 à 14:14
 -- Version du serveur :  8.0.18
 -- Version de PHP :  7.3.12
 
@@ -31,14 +31,14 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `comment`;
 CREATE TABLE IF NOT EXISTS `comment` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
-  `author` varchar(30) NOT NULL,
+  `author` varchar(30) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `creationDate` date NOT NULL,
   `idPost` int(10) NOT NULL,
-  `comment` text NOT NULL,
+  `comment` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `report` tinyint(1) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_id_post` (`idPost`)
-) ENGINE=InnoDB AUTO_INCREMENT=132 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=132 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `comment`
@@ -85,12 +85,12 @@ DROP TABLE IF EXISTS `post`;
 CREATE TABLE IF NOT EXISTS `post` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
   `num` int(10) NOT NULL,
-  `title` varchar(50) NOT NULL,
-  `excerpt` text NOT NULL,
-  `content` text NOT NULL,
+  `title` varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `excerpt` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `content` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
   `creationDate` date NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `post`
