@@ -33,7 +33,7 @@ class CommentDAO extends DAO {
      * @return mixed
      */
     public function getAllComments() {
-        $req = 'SELECT comment.id, comment.author, comment.comment, comment.idPost, DATE_FORMAT(comment.creationDate, \'%d/%m/%Y\') AS date_comment, post.title FROM comment INNER JOIN post ON comment.idPost=post.id ORDER BY comment.creationDate DESC';
+        $req = 'SELECT comment.id, comment.author, comment.comment, comment.idPost, DATE_FORMAT(comment.creationDate, \'%d/%m/%Y\') AS date_comment, post.title FROM comment INNER JOIN post ON comment.idPost=post.id WHERE report=false ORDER BY comment.creationDate DESC';
         return $this->createQuery($req);
     }
     

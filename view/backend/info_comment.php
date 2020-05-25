@@ -19,7 +19,7 @@
 
             <div class='infos_and_labels'>
                 <p class='label'>Auteur :</p>
-                <p class='info'><?= $comment->author ?></p>
+                <p class='info'><?= htmlspecialchars($comment->author) ?></p>
             </div>
 
             <div class='infos_and_labels'>
@@ -29,7 +29,7 @@
 
             <div class='infos_and_labels'>
                 <p class='label'>Commentaire :</p>
-                <p class='info'><?= $comment->comment ?></p>
+                <p class='info'><?= htmlspecialchars($comment->comment) ?></p>
             </div>
         </div>
         
