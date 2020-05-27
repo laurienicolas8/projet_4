@@ -13,8 +13,7 @@
                             <p><span class="author_comment">'.htmlspecialchars($comment->author).'</span>, <br>posté le '.$comment->date_comment.' sur le chapitre <em>'.$comment->title.'</em></p> 
                         </div>                        
                         <p>'.htmlspecialchars($comment->comment).'</p>
-                        <div class="options_comments">
-                            <a href="./index.php?action=infoComment&idComment='.$comment->id.'" class="element_options"><i class="far fa-eye"></i> Afficher</a>                            
+                        <div class="options_comments">                 
                             <a href="./index.php?action=confirmDeleteComment&idComment='.$comment->id.'" class="element_options"><i class="fas fa-trash"></i> Supprimer</a>
                         </div>                    
                     </div>';

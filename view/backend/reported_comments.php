@@ -14,7 +14,6 @@
                         </div>                        
                         <p>'.htmlspecialchars($comment->comment).'</p>
                         <div class="options_comments">
-                            <a href="./index.php?action=infoComment&idComment='.$comment->id.'" class="element_options"><i class="far fa-eye"></i> Afficher</a>
                             <a href="./index.php?action=confirmIgnore&idComment='.$comment->id.'" class="element_options"><i class="fas fa-eye-slash"></i> Ignorer</a>
                             <a href="./index.php?action=confirmDeleteComment&idComment='.$comment->id.'" class="element_options"><i class="fas fa-trash"></i> Supprimer</a>
                         </div>                    

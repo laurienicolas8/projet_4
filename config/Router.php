@@ -121,10 +121,6 @@ class Router {
                         $this->backController->reportedComments();
                     break;
 
-                    case 'infoComment':
-                        $this->backController->infoComment($idComment);
-                    break;
-
                     case 'confirmIgnore':
                         $this->backController->confirmIgnore($idComment);
                     break;

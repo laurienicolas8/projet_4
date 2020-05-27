@@ -128,20 +128,6 @@ class BackController extends Controller {
     }
     
     /**
-     * infoComment
-     * control that $idComment exists and is > 0
-     * call the method getSingleComment() in $oneComment
-     * call the page displaying comment data
-     * @param int $idComment
-     */
-    public function infoComment($idComment) {
-        if (isset($idComment) && $idComment > 0) {
-            $oneComment = $this->commentDAO->getSingleComment($idComment);
-            require('./view/backend/info_comment.php');
-        }
-    }
-    
-    /**
      * confirmIgnore
      * control that $idComment exists and is > 0
      * call the method getSingleComment() in $oneComment
